@@ -1,8 +1,29 @@
-export const pricingBenefits = [
-  'Unlimited users and unlimited use',
-  'Add any and all data sources',
-  'Invite as many partners as you want'
-] as const;
+import type { PageMeta } from '$lib/content/contentTypes';
+
+export const pricingPageContent = {
+  title: 'Pricing',
+  description: 'Our pricing is entirely success based',
+  heading: 'Pricing',
+  intro: 'Our pricing is success based. You pay a percentage of the net new revenue we help you generate'
+} as const satisfies PageMeta & {
+  heading: string;
+  intro: string;
+};
+
+export const pricingPlan = {
+  price: '5%',
+  priceLabel: 'of revenue',
+  name: 'Success based',
+  description: 'Pay 5% of the revenue we help you generate and only pay after you get paid',
+  ctaLabel: 'Join now',
+  benefits: [
+    'Unlimited users and unlimited use',
+    'Add any and all data sources',
+    'Invite as many partners as you want'
+  ]
+} as const;
+
+export type PricingPlan = typeof pricingPlan;
 
 export const pricingFaqItems = [
   {
@@ -22,3 +43,5 @@ export const pricingFaqItems = [
     answer: 'Some companies pay $25,000 for a proof of concept. You need to share your CRM data to qualify for success-based pricing. Some companies prefer to get familiar with our tech before sharing their CRM data. In these cases, you can pay $25,000 for a proof of concept before transitioning to success-based pricing'
   }
 ] as const;
+
+export type PricingFaqItem = (typeof pricingFaqItems)[number];

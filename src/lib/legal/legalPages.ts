@@ -1,13 +1,13 @@
+import type { PageMeta } from '$lib/content/contentTypes';
+
 export type LegalSection = {
   title: string;
   paragraphs: string[];
 };
 
-export type LegalPageContent = {
+export type LegalPageContent = PageMeta & {
   slug: string;
   label: string;
-  title: string;
-  description: string;
   updatedAt: string;
   sections: LegalSection[];
 };

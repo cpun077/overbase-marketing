@@ -1,5 +1,6 @@
 <script lang="ts">
-  import CareersPage from '$lib/careers/CareersPage.svelte';
+  import { careersPageContent } from '$lib/careers/careersContent';
+  import ContentPage from '$lib/content/ContentPage.svelte';
 </script>
 
-<CareersPage />
+<ContentPage content={careersPageContent} />

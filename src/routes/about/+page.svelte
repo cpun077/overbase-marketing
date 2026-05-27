@@ -1,5 +1,6 @@
 <script lang="ts">
-  import AboutPage from '$lib/about/AboutPage.svelte';
+  import { aboutPageContent } from '$lib/about/aboutContent';
+  import ContentPage from '$lib/content/ContentPage.svelte';
 </script>
 
-<AboutPage />
+<ContentPage content={aboutPageContent} />

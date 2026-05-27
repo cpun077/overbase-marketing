@@ -2,11 +2,19 @@
   import { ListIcon, XIcon } from 'phosphor-svelte';
   import MobileMenu from './MobileMenu.svelte';
 
-  export let activePath = '/';
-  export let currentUrl: URL;
-  export let currentHash = '';
+  let {
+    activePath = '/',
+    currentUrl,
+    currentHash = ''
+  }: {
+    activePath?: string;
+    currentUrl: URL;
+    currentHash?: string;
+  } = $props();
 
-  let open = false;
+  let open = $state(false);
+  const MenuIcon = $derived(open ? XIcon : ListIcon);
+  const menuIconSize = $derived(open ? 25 : 26);
 </script>
 
 <header class="fixed left-0 top-0 z-30 flex h-[50px] w-full items-center justify-between bg-white px-[20px] md:hidden">
@@ -19,9 +27,9 @@
     class="-mr-[4px] inline-flex h-[38px] w-[38px] items-center justify-center text-stone-950"
     aria-label={open ? 'Close menu' : 'Open menu'}
     aria-expanded={open}
-    on:click={() => (open = !open)}
+    onclick={() => (open = !open)}
   >
-    <svelte:component this={open ? XIcon : ListIcon} size={open ? 25 : 26} weight="regular" />
+    <MenuIcon size={menuIconSize} weight="regular" />
   </button>
 
   {#if open}

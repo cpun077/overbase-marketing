@@ -4,42 +4,39 @@
   import Hero from './Hero.svelte';
   import OpportunityEmailGraphic from './OpportunityEmailGraphic.svelte';
   import PartnerDataSharingGraphic from './PartnerDataSharingGraphic.svelte';
-  import SectionStack from './SectionStack.svelte';
   import TestimonialsSection from './TestimonialsSection.svelte';
+  import { homePageContent } from './homeContent';
 </script>
 
 <svelte:head>
-  <title>Overbase - Share sales data</title>
-  <meta
-    name="description"
-    content="Overbase helps professional services firms share sales data with ecosystem partners and receive revenue opportunities by email."
-  />
+  <title>{homePageContent.title}</title>
+  <meta name="description" content={homePageContent.description} />
 </svelte:head>
 
 <main>
   <Hero />
-  <SectionStack>
+  <div class="flex flex-col gap-[112px] pb-[112px] pt-[128px] md:gap-[150px] md:pb-[150px] md:pt-[170px]">
     <FeatureSection
-      title="Share your data"
-      body="Share any structured data like CRM and share any unstructured data like email. Easily share even your most disconnected data"
+      title={homePageContent.features.dataSources.title}
+      body={homePageContent.features.dataSources.body}
     >
       <DataSourceGridGraphic />
     </FeatureSection>
 
     <FeatureSection
-      title="Partners share their data"
-      body="Your ecosystem partners can share data with you for free and securely"
+      title={homePageContent.features.partnerSharing.title}
+      body={homePageContent.features.partnerSharing.body}
     >
       <PartnerDataSharingGraphic />
     </FeatureSection>
 
     <FeatureSection
-      title="Get opportunities by email"
-      body="We compare both sides to find overlap, then we send actionable revenue opportunities to your team by email"
+      title={homePageContent.features.opportunityEmail.title}
+      body={homePageContent.features.opportunityEmail.body}
     >
       <OpportunityEmailGraphic />
     </FeatureSection>
 
     <TestimonialsSection />
-  </SectionStack>
+  </div>
 </main>

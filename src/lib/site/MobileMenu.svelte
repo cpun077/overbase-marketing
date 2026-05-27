@@ -2,9 +2,15 @@
   import { headerActionItems, siteNavItems } from './navigation';
   import { createPortalAuthHrefForCurrentPage } from '$lib/portalAuthLinks';
 
-  export let activePath = '/';
-  export let currentUrl: URL;
-  export let currentHash = '';
+  let {
+    activePath = '/',
+    currentUrl,
+    currentHash = ''
+  }: {
+    activePath?: string;
+    currentUrl: URL;
+    currentHash?: string;
+  } = $props();
 </script>
 
 <nav
@@ -12,15 +18,18 @@
   aria-label="Mobile primary"
 >
   <div class="flex flex-col">
-    {#each siteNavItems as link}
+    {#each siteNavItems as link (link.href)}
       <a
         href={link.href}
-        class={`py-[11px] text-[16px] leading-none ${activePath === link.href ? 'text-stone-900' : 'text-stone-600'}`}
+        class={[
+          'py-[11px] text-[16px] leading-none',
+          activePath === link.href ? 'text-stone-900' : 'text-stone-600'
+        ]}
       >
         {link.label}
       </a>
     {/each}
-    {#each headerActionItems as link}
+    {#each headerActionItems as link (link.authRoute)}
       <a
         href={createPortalAuthHrefForCurrentPage(link.authRoute, currentUrl, currentHash)}
         target="_blank"

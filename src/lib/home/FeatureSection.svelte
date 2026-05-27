@@ -1,6 +1,15 @@
 <script lang="ts">
-  export let title: string;
-  export let body: string;
+  import type { Snippet } from 'svelte';
+
+  let {
+    title,
+    body,
+    children
+  }: {
+    title: string;
+    body: string;
+    children: Snippet;
+  } = $props();
 </script>
 
 <section class="px-[18px] md:px-8">
@@ -14,7 +23,7 @@
     </p>
 
     <div class="mt-[42px]">
-      <slot />
+      {@render children()}
     </div>
   </div>
 </section>

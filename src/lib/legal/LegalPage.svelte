@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { LegalPageContent } from './legalPages';
 
-  export let page: LegalPageContent;
+  let { page }: { page: LegalPageContent } = $props();
 </script>
 
 <svelte:head>
@@ -21,7 +21,7 @@
     </header>
 
     <div class="mt-[32px] flex flex-col gap-[34px]">
-      {#each page.sections as section, index}
+      {#each page.sections as section, index (section.title)}
         <section>
           <h2 class="font-heading text-[18px] font-medium leading-[1.25] tracking-normal text-stone-800 md:text-[20px]">
             {index + 1}.&nbsp;&nbsp;{section.title}

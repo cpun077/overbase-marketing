@@ -1,18 +1,5 @@
 <script lang="ts">
-  const testimonials = [
-    {
-      quote: 'Overbase increased our revenue from partnerships by 20%',
-      name: "Alex L'Heureux",
-      role: 'CEO',
-      company: 'WSP'
-    },
-    {
-      quote: 'Overbase is simple to learn, our team just receives emails',
-      name: 'Karthik Rao',
-      role: 'CEO',
-      company: 'Nielsen'
-    }
-  ];
+  import { testimonials } from './testimonialsContent';
 </script>
 
 <section class="px-[18px] md:px-8">
@@ -26,7 +13,7 @@
     </p>
 
     <div class="mt-[42px] flex flex-col gap-[34px] md:gap-[40px]">
-      {#each testimonials as testimonial}
+      {#each testimonials as testimonial (testimonial.quote)}
         <figure class="border-l-[2px] border-stone-200/70 pl-[18px] md:pl-[20px]">
           <blockquote
             class="font-heading text-[18px] font-normal italic leading-[1.42] tracking-normal text-stone-700 md:text-[20px]"
