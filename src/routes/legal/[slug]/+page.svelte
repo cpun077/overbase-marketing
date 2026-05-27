@@ -2,7 +2,7 @@
   import LegalPage from '$lib/legal/LegalPage.svelte';
   import type { PageData } from './$types';
 
-  export let data: PageData;
+  let { data }: { data: PageData } = $props();
 </script>
 
 <LegalPage page={data.legalPage} />

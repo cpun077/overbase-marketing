@@ -5,23 +5,13 @@
   import Footer from './Footer.svelte';
   import MobileHeader from './MobileHeader.svelte';
 
-  let {
-    activePath = '/',
-    currentUrl,
-    currentHash = '',
-    children
-  }: {
-    activePath?: string;
-    currentUrl: URL;
-    currentHash?: string;
-    children: Snippet;
-  } = $props();
+  let { children }: { children: Snippet } = $props();
 </script>
 
 <div class="flex min-h-[100dvh] flex-col bg-[var(--site-bg)]">
-  <DesktopSideMenu {activePath} />
-  <DesktopHeaderActions {currentUrl} {currentHash} />
-  <MobileHeader {activePath} {currentUrl} {currentHash} />
+  <DesktopSideMenu />
+  <DesktopHeaderActions />
+  <MobileHeader />
   <div class="flex-1">
     {@render children()}
   </div>

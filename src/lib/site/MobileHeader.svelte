@@ -2,16 +2,6 @@
   import { ListIcon, XIcon } from 'phosphor-svelte';
   import MobileMenu from './MobileMenu.svelte';
 
-  let {
-    activePath = '/',
-    currentUrl,
-    currentHash = ''
-  }: {
-    activePath?: string;
-    currentUrl: URL;
-    currentHash?: string;
-  } = $props();
-
   let open = $state(false);
   const MenuIcon = $derived(open ? XIcon : ListIcon);
   const menuIconSize = $derived(open ? 25 : 26);
@@ -33,6 +23,6 @@
   </button>
 
   {#if open}
-    <MobileMenu {activePath} {currentUrl} {currentHash} />
+    <MobileMenu />
   {/if}
 </header>

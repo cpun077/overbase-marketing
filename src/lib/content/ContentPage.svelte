@@ -1,17 +1,16 @@
 <script lang="ts">
   import type { ContentPageContent } from './contentTypes';
   import ContentLinks from './ContentLinks.svelte';
+  import PageFrame from './PageFrame.svelte';
+  import PageHead from './PageHead.svelte';
   import RichParagraph from './RichParagraph.svelte';
 
   let { content }: { content: ContentPageContent } = $props();
 </script>
 
-<svelte:head>
-  <title>{content.title}</title>
-  <meta name="description" content={content.description} />
-</svelte:head>
+<PageHead meta={content} />
 
-<main class="px-[22px] pb-[120px] pt-[74px] md:px-0 md:pt-[43px]">
+<PageFrame topPadding="standard">
   <section class="mx-auto w-full max-w-[680px]">
     <h1 class="font-heading text-[32px] font-medium leading-[1.05] tracking-normal text-stone-900">
       {content.heading}
@@ -35,4 +34,4 @@
       </p>
     </section>
   {/each}
-</main>
+</PageFrame>

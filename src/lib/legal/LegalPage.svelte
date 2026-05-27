@@ -1,15 +1,14 @@
 <script lang="ts">
+  import PageFrame from '$lib/content/PageFrame.svelte';
+  import PageHead from '$lib/content/PageHead.svelte';
   import type { LegalPageContent } from './legalPages';
 
   let { page }: { page: LegalPageContent } = $props();
 </script>
 
-<svelte:head>
-  <title>{page.title}</title>
-  <meta name="description" content={page.description} />
-</svelte:head>
+<PageHead meta={page} />
 
-<main class="px-[22px] pb-[120px] pt-[74px] md:px-0 md:pt-[43px]">
+<PageFrame topPadding="standard">
   <article class="mx-auto w-full max-w-[680px]">
     <header>
       <h1 class="font-heading text-[32px] font-medium leading-[1.05] tracking-normal text-stone-900">
@@ -38,4 +37,4 @@
       {/each}
     </div>
   </article>
-</main>
+</PageFrame>

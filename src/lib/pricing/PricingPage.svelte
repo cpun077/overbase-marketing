@@ -1,4 +1,6 @@
 <script lang="ts">
+  import PageFrame from '$lib/content/PageFrame.svelte';
+  import PageHead from '$lib/content/PageHead.svelte';
   import { createPortalAuthHrefForPath } from '$lib/portalAuthLinks';
   import PricingCard from './PricingCard.svelte';
   import PricingFaqSection from './PricingFaqSection.svelte';
@@ -7,12 +9,9 @@
   const joinHref = createPortalAuthHrefForPath('join', '/pricing');
 </script>
 
-<svelte:head>
-  <title>{pricingPageContent.title}</title>
-  <meta name="description" content={pricingPageContent.description} />
-</svelte:head>
+<PageHead meta={pricingPageContent} />
 
-<main class="px-[22px] pb-[120px] pt-[43px] md:px-0">
+<PageFrame topPadding="compact">
   <section class="mx-auto w-full max-w-[680px]">
     <h1 class="font-heading text-[32px] font-medium leading-[1.05] tracking-normal text-stone-900">
       {pricingPageContent.heading}
@@ -26,4 +25,4 @@
   </section>
 
   <PricingFaqSection items={pricingFaqItems} />
-</main>
+</PageFrame>

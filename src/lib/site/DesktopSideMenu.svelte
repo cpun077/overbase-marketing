@@ -1,7 +1,8 @@
 <script lang="ts">
+  import { page } from '$app/state';
   import { siteNavItems } from './navigation';
 
-  let { activePath = '/' }: { activePath?: string } = $props();
+  const activePath = $derived(page.url.pathname);
 </script>
 
 <aside class="fixed left-[54px] top-[36px] hidden md:block" aria-label="Primary">
@@ -21,6 +22,7 @@
           'w-fit hover:text-stone-700',
           { 'text-stone-900': activePath === item.href }
         ]}
+        aria-current={activePath === item.href ? 'page' : undefined}
       >
         {item.label}
       </a>
