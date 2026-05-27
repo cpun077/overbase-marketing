@@ -40,7 +40,7 @@
 
 <style>
   .hero-pill {
-    animation: hero-content-enter 340ms cubic-bezier(0.22, 1, 0.36, 1) 1380ms both;
+    animation: hero-content-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) 890ms both;
   }
 
   .hero-title-lead {
