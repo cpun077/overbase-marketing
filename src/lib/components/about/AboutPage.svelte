@@ -1,5 +1,5 @@
 <script lang="ts">
-  import EditorialPage from '$lib/components/editorial/EditorialPage.svelte';
+  import ContentPage from '$lib/components/content/ContentPage.svelte';
 
   const aboutIntro = [
     [
@@ -29,7 +29,7 @@
   ];
 </script>
 
-<EditorialPage
+<ContentPage
   title="About"
   description="Learn about Overbase and the team behind it."
   heading="About"

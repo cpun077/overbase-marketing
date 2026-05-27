@@ -1,8 +1,8 @@
 <script lang="ts">
   import ButtonLink from './ButtonLink.svelte';
-  import { createStaticPortalAuthHref } from '$lib/portalAuthLinks';
+  import { createPortalAuthHrefForPath } from '$lib/portalAuthLinks';
 
-  const joinHref = createStaticPortalAuthHref('join', '/');
+  const joinHref = createPortalAuthHrefForPath('join', '/');
 </script>
 
 <section

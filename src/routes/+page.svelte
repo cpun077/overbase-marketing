@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PageShell from '$lib/components/PageShell.svelte';
+  import HomePage from '$lib/components/HomePage.svelte';
 </script>
 
-<PageShell />
+<HomePage />

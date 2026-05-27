@@ -1,6 +1,6 @@
 <script lang="ts">
   import { headerActionItems, siteNavItems } from '$lib/data/siteNav';
-  import { createCurrentPortalAuthHref } from '$lib/portalAuthLinks';
+  import { createPortalAuthHrefForCurrentPage } from '$lib/portalAuthLinks';
 
   export let activePath = '/';
   export let currentUrl: URL;
@@ -22,7 +22,7 @@
     {/each}
     {#each headerActionItems as link}
       <a
-        href={createCurrentPortalAuthHref(link.authRoute, currentUrl, currentHash)}
+        href={createPortalAuthHrefForCurrentPage(link.authRoute, currentUrl, currentHash)}
         target="_blank"
         rel="noopener noreferrer"
         class="py-[11px] text-[16px] leading-none text-stone-500"

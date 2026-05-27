@@ -1,25 +1,25 @@
 <script lang="ts">
-  type Segment = {
-    name: string;
-    rule: string;
-    progress: number;
+  type PartnerDataShare = {
+    partnerName: string;
+    dataSourceSummary: string;
+    dataSourceCoverage: number;
   };
 
-  const segments: Segment[] = [
+  const partnerDataShares: PartnerDataShare[] = [
     {
-      name: 'Kensington, Blake & Thorne',
-      rule: 'all data sources',
-      progress: 1
+      partnerName: 'Kensington, Blake & Thorne',
+      dataSourceSummary: 'all data sources',
+      dataSourceCoverage: 1
     },
     {
-      name: 'Caldwell, Cross & Keating',
-      rule: '5 data sources',
-      progress: 0.69
+      partnerName: 'Caldwell, Cross & Keating',
+      dataSourceSummary: '5 data sources',
+      dataSourceCoverage: 0.69
     },
     {
-      name: 'Brightfield Partners',
-      rule: '2 data sources',
-      progress: 0.14
+      partnerName: 'Brightfield Partners',
+      dataSourceSummary: '2 data sources',
+      dataSourceCoverage: 0.14
     }
   ];
 </script>
@@ -36,17 +36,17 @@
   </div>
 
   <div class="mt-[20px] overflow-hidden rounded-[6px] border border-stone-200/70 bg-white">
-    {#each segments as segment, index}
-      <article class:border-b={index < segments.length - 1} class="border-stone-200/70 px-[12px] py-[18px] md:px-[12px] md:py-[19px]">
+    {#each partnerDataShares as partnerDataShare, index}
+      <article class:border-b={index < partnerDataShares.length - 1} class="border-stone-200/70 px-[12px] py-[18px] md:px-[12px] md:py-[19px]">
         <div class="flex items-start justify-between gap-4">
           <div class="min-w-0">
             <h4 class="truncate text-[14px] font-normal leading-[1.2] tracking-normal text-stone-700 md:text-[15px]">
-              {segment.name}
+              {partnerDataShare.partnerName}
             </h4>
 
             <div class="mt-[14px] flex min-w-0 items-center gap-[6px]">
               <span class="truncate text-[12px] leading-none tracking-normal text-stone-300 md:text-[13px]">
-                {segment.rule}
+                {partnerDataShare.dataSourceSummary}
               </span>
             </div>
           </div>
@@ -55,7 +55,7 @@
         <div class="mt-[14px] h-[10px] overflow-hidden rounded-full border border-stone-200/70 bg-stone-50">
           <div
             class="h-full rounded-full bg-stone-200"
-            style={`width: ${segment.progress * 100}%`}
+            style={`width: ${partnerDataShare.dataSourceCoverage * 100}%`}
             aria-hidden="true"
           ></div>
         </div>

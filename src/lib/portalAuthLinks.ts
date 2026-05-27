@@ -7,7 +7,7 @@ function isSafeRelativePath(path: string) {
   return path.startsWith('/') && !path.startsWith('//');
 }
 
-export function createMarketingReturnButtonHref(path: string) {
+export function createMarketingReturnHref(path: string) {
   if (!isSafeRelativePath(path)) {
     return new URL('/', MARKETING_ORIGIN).href;
   }
@@ -15,17 +15,17 @@ export function createMarketingReturnButtonHref(path: string) {
   return new URL(path, MARKETING_ORIGIN).href;
 }
 
-export function createPortalAuthHref(route: PortalAuthRoute, returnButtonHref: string) {
+export function createPortalAuthHref(route: PortalAuthRoute, marketingReturnHref: string) {
   const url = new URL(`/${route}`, PORTAL_ORIGIN);
-  url.searchParams.set('returnTo', returnButtonHref);
+  url.searchParams.set('returnTo', marketingReturnHref);
   return url.href;
 }
 
-export function createStaticPortalAuthHref(route: PortalAuthRoute, marketingPath: string) {
-  return createPortalAuthHref(route, createMarketingReturnButtonHref(marketingPath));
+export function createPortalAuthHrefForPath(route: PortalAuthRoute, marketingPath: string) {
+  return createPortalAuthHref(route, createMarketingReturnHref(marketingPath));
 }
 
-export function createCurrentPortalAuthHref(route: PortalAuthRoute, pageUrl: URL, hash = '') {
+export function createPortalAuthHrefForCurrentPage(route: PortalAuthRoute, pageUrl: URL, hash = '') {
   const returnPath = `${pageUrl.pathname}${pageUrl.search}${hash}`;
-  return createPortalAuthHref(route, createMarketingReturnButtonHref(returnPath));
+  return createPortalAuthHref(route, createMarketingReturnHref(returnPath));
 }

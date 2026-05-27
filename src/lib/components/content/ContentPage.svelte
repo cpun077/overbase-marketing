@@ -1,29 +1,29 @@
 <script lang="ts">
   import { ArrowUpRightIcon } from 'phosphor-svelte';
 
-  type EditorialTextSegment = {
+  type ContentTextSegment = {
     text: string;
     href?: string;
   };
 
-  type EditorialParagraph = EditorialTextSegment[];
+  type ContentParagraph = ContentTextSegment[];
 
-  type EditorialLink = {
+  type ContentLink = {
     label: string;
     href: string;
     external?: boolean;
   };
 
-  type EditorialSection = {
+  type ContentSection = {
     body: string;
   };
 
   export let title: string;
   export let description: string;
   export let heading: string;
-  export let intro: EditorialParagraph[];
-  export let links: EditorialLink[] = [];
-  export let sections: EditorialSection[] = [];
+  export let intro: ContentParagraph[];
+  export let links: ContentLink[] = [];
+  export let sections: ContentSection[] = [];
 
   const inlineLinkClasses =
     'font-normal text-stone-500 underline decoration-stone-300 decoration-1 underline-offset-[3px] hover:text-stone-900';

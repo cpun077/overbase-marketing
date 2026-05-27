@@ -1,9 +1,9 @@
 <script lang="ts">
   import { CheckIcon } from 'phosphor-svelte';
   import ButtonLink from '$lib/components/ButtonLink.svelte';
-  import { createStaticPortalAuthHref } from '$lib/portalAuthLinks';
+  import { createPortalAuthHrefForPath } from '$lib/portalAuthLinks';
 
-  const joinHref = createStaticPortalAuthHref('join', '/pricing');
+  const joinHref = createPortalAuthHrefForPath('join', '/pricing');
 
   const benefits = [
     'Unlimited users and unlimited use',
