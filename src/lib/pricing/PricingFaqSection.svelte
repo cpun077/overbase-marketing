@@ -1,21 +1,19 @@
 <script lang="ts">
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
-
-  type PricingFaqItem = {
-    question: string;
-    answer: string;
-  };
+  import type { PricingFaqItem } from './pricingContent';
 
   let {
+    heading,
     items
   }: {
+    heading: string;
     items: readonly PricingFaqItem[];
   } = $props();
 </script>
 
 <ContentMeasure as="section" width="narrow" class="mt-[128px]">
   <h2 class="font-heading text-[22px] font-medium leading-[1.18] tracking-normal text-stone-800 md:text-[24px]">
-    Frequently Asked Questions
+    {heading}
   </h2>
 
   <div class="mt-[38px] flex flex-col gap-[32px]">

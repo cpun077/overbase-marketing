@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import MarketingSection from '$lib/page/MarketingSection.svelte';
+  import HomeSection from './HomeSection.svelte';
 
   let {
     title,
@@ -13,7 +13,7 @@
   } = $props();
 </script>
 
-<MarketingSection>
+<HomeSection>
     <h2 class="font-heading text-[24px] font-medium leading-[1.18] tracking-normal text-stone-800 md:text-[26px]">
       {title}
     </h2>
@@ -25,4 +25,4 @@
     <div class="mt-[42px]">
       {@render children()}
     </div>
-</MarketingSection>
+</HomeSection>

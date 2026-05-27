@@ -113,9 +113,9 @@ const legalPages = [
   }
 ] as const satisfies LegalPageContent[];
 
-export const legalNavigationItems = legalPages.map(({ label }) => ({
+export const legalNavigationItems = legalPages.map(({ label, slug }) => ({
   label,
-  href: '#'
+  href: `/legal/${slug}`
 }));
 
 export const getLegalPage = (slug: string) => legalPages.find((page) => page.slug === slug);
