@@ -1,4 +1,5 @@
 <script lang="ts">
+  import ContentMeasure from '$lib/page/ContentMeasure.svelte';
   import type { PricingFaqItem } from './pricingContent';
 
   let {
@@ -8,7 +9,7 @@
   } = $props();
 </script>
 
-<section class="mx-auto mt-[128px] w-full max-w-[680px]">
+<ContentMeasure as="section" width="narrow" class="mt-[128px]">
   <h2 class="font-heading text-[22px] font-medium leading-[1.18] tracking-normal text-stone-800 md:text-[24px]">
     Frequently Asked Questions
   </h2>
@@ -25,4 +26,4 @@
       </article>
     {/each}
   </div>
-</section>
+</ContentMeasure>

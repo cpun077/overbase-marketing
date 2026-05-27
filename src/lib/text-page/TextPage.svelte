@@ -1,5 +1,6 @@
 <script lang="ts">
-  import MainContentFrame from '$lib/page/MainContentFrame.svelte';
+  import ContentMeasure from '$lib/page/ContentMeasure.svelte';
+  import PageFrame from '$lib/page/PageFrame.svelte';
   import SeoHead from '$lib/page/SeoHead.svelte';
   import type { TextPageContent } from './textPageTypes';
   import PageLinkList from './PageLinkList.svelte';
@@ -10,8 +11,8 @@
 
 <SeoHead meta={content} />
 
-<MainContentFrame topPadding="standard">
-  <section class="mx-auto w-full max-w-[680px]">
+<PageFrame topPadding="standard">
+  <ContentMeasure as="section" width="narrow">
     <h1 class="font-heading text-[32px] font-medium leading-[1.05] tracking-normal text-stone-900">
       {content.heading}
     </h1>
@@ -25,13 +26,13 @@
     {#if content.links.length}
       <PageLinkList links={content.links} />
     {/if}
-  </section>
+  </ContentMeasure>
 
   {#each content.sections as section (section.body)}
-    <section class="mx-auto mt-[64px] w-full max-w-[680px] pb-[96px]">
+    <ContentMeasure as="section" width="narrow" class="mt-[64px] pb-[96px]">
       <p class="max-w-[620px] text-[15px] font-normal leading-[1.55] tracking-normal text-stone-700 md:text-[16px]">
         {section.body}
       </p>
-    </section>
+    </ContentMeasure>
   {/each}
-</MainContentFrame>
+</PageFrame>

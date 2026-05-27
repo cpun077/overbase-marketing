@@ -1,14 +1,15 @@
 <script lang="ts">
   import { ArrowRightIcon } from 'phosphor-svelte';
+  import ContentMeasure from '$lib/page/ContentMeasure.svelte';
   import ButtonLink from '$lib/ui/ButtonLink.svelte';
   import { createPortalAuthUrlForMarketingPath } from '$lib/portalAuthLinks';
+  import HeroCustomerProof from './HeroCustomerProof.svelte';
 
   const joinHref = createPortalAuthUrlForMarketingPath('join', '/');
 </script>
 
-<section
-  class="mx-auto flex w-full max-w-[780px] flex-col items-start px-[18px] pt-[126px] md:items-center md:px-8 md:pt-[157px]"
->
+<section class="px-[18px] pt-[126px] md:px-8 md:pt-[157px]">
+  <ContentMeasure width="hero" class="flex flex-col items-start md:items-center">
   <a
     href={joinHref}
     target="_blank"
@@ -37,6 +38,11 @@
     <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" textSize="compact">Join now</ButtonLink>
     <ButtonLink href="https://cal.com/juliennewman" target="_blank" rel="noopener noreferrer" variant="secondary" size="large" textSize="compact">Request demo</ButtonLink>
   </div>
+
+  <div class="hero-proof mt-[66px] w-full translate-y-[4px] opacity-0 will-change-[transform,opacity] md:mt-[70px]">
+    <HeroCustomerProof />
+  </div>
+  </ContentMeasure>
 </section>
 
 <style>
@@ -58,6 +64,10 @@
 
   .hero-actions {
     animation: hero-content-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) 990ms both;
+  }
+
+  .hero-proof {
+    animation: hero-content-enter 320ms cubic-bezier(0.22, 1, 0.36, 1) 1090ms both;
   }
 
   @keyframes hero-title-lead-settle {
@@ -96,7 +106,8 @@
     .hero-title-lead,
     .hero-title-growth,
     .hero-support,
-    .hero-actions {
+    .hero-actions,
+    .hero-proof {
       animation: none;
       opacity: 1;
       transform: none;

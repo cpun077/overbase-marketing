@@ -1,5 +1,6 @@
 <script lang="ts">
-  import MainContentFrame from '$lib/page/MainContentFrame.svelte';
+  import ContentMeasure from '$lib/page/ContentMeasure.svelte';
+  import PageFrame from '$lib/page/PageFrame.svelte';
   import SeoHead from '$lib/page/SeoHead.svelte';
   import type { LegalPageContent } from './legalPages';
 
@@ -8,8 +9,8 @@
 
 <SeoHead meta={page} />
 
-<MainContentFrame topPadding="standard">
-  <article class="mx-auto w-full max-w-[680px]">
+<PageFrame topPadding="standard">
+  <ContentMeasure as="article" width="narrow">
     <header>
       <h1 class="font-heading text-[32px] font-medium leading-[1.05] tracking-normal text-stone-900">
         {page.title}
@@ -36,5 +37,5 @@
         </section>
       {/each}
     </div>
-  </article>
-</MainContentFrame>
+  </ContentMeasure>
+</PageFrame>

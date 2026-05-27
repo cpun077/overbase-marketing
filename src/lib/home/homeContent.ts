@@ -33,6 +33,11 @@ type PartnerDataShare = {
   dataSourceCoverage: number;
 };
 
+type HeroCustomerProofItem = {
+  customerName: string;
+  proofLabel: string;
+};
+
 export const homePageContent = {
   title: "Overbase - Share sales data",
   description:
@@ -87,3 +92,22 @@ export const partnerDataShares = [
     dataSourceCoverage: 0.14,
   },
 ] as const satisfies readonly PartnerDataShare[];
+
+export const heroCustomerProofItems = [
+  {
+    customerName: "WSP",
+    proofLabel: "Customer using Overbase for partner-sourced revenue",
+  },
+  {
+    customerName: "Nielsen",
+    proofLabel: "Customer using Overbase for email-delivered opportunities",
+  },
+  {
+    customerName: "Kensington",
+    proofLabel: "Reference customer sharing sales data with partners",
+  },
+  {
+    customerName: "Brightfield",
+    proofLabel: "Reference customer receiving partner opportunity emails",
+  },
+] as const satisfies readonly HeroCustomerProofItem[];

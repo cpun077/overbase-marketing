@@ -1,9 +1,9 @@
 <script lang="ts">
+  import MarketingSection from '$lib/page/MarketingSection.svelte';
   import { testimonials } from './testimonialsContent';
 </script>
 
-<section class="px-[18px] md:px-8">
-  <div class="mx-auto w-full max-w-[740px]">
+<MarketingSection>
     <h2 class="font-heading text-[24px] font-medium leading-[1.18] tracking-normal text-stone-800 md:text-[26px]">
       See why teams stick with Overbase
     </h2>
@@ -27,5 +27,4 @@
         </figure>
       {/each}
     </div>
-  </div>
-</section>
+</MarketingSection>
