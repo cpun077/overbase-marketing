@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Check } from 'phosphor-svelte';
+  import { CheckIcon } from 'phosphor-svelte';
   import ButtonLink from '$lib/components/ButtonLink.svelte';
   import { createStaticPortalAuthHref } from '$lib/portalAuthLinks';
 
@@ -75,7 +75,7 @@
       <ul class="mt-[24px] space-y-[23px] border-t border-stone-200/70 pt-[27px]">
         {#each benefits as benefit}
           <li class="flex items-center gap-[13px] text-[14px] font-normal leading-snug tracking-normal text-stone-700">
-            <Check size={14} weight="regular" class="shrink-0 text-stone-700" />
+            <CheckIcon size={14} weight="regular" class="shrink-0 text-stone-700" />
             <span>{benefit}</span>
           </li>
         {/each}

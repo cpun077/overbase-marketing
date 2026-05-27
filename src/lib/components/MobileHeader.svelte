@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { List, X } from 'phosphor-svelte';
+  import { ListIcon, XIcon } from 'phosphor-svelte';
   import MobileMenu from './MobileMenu.svelte';
 
   export let activePath = '/';
@@ -8,7 +8,7 @@
 
   let open = false;
 
-  $: MenuIcon = open ? X : List;
+  $: MenuIcon = open ? XIcon : ListIcon;
   $: menuIconSize = open ? 25 : 26;
 </script>
 

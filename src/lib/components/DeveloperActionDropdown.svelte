@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount, tick } from 'svelte';
-  import { CaretDown } from 'phosphor-svelte';
+  import { CaretDownIcon } from 'phosphor-svelte';
 
   type DropdownAction = {
     id: string;
@@ -127,7 +127,7 @@
     on:keydown={handleTriggerKeydown}
   >
     <span class="min-w-0 truncate">{selectedAction.label}</span>
-    <CaretDown
+    <CaretDownIcon
       class={`shrink-0 text-stone-500 transition-transform ${open ? 'rotate-180' : ''}`}
       size={14}
       weight="bold"

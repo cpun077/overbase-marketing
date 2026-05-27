@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ArrowUpRight } from 'phosphor-svelte';
+  import { ArrowUpRightIcon } from 'phosphor-svelte';
 
   type EditorialTextSegment = {
     text: string;
@@ -66,7 +66,7 @@
             class="flex items-center justify-between gap-8 border-b border-stone-200/70 py-[24px] text-[15px] font-normal leading-none tracking-normal text-stone-700 transition-colors hover:text-stone-900 md:text-[16px]"
           >
             <span>{link.label}</span>
-            <ArrowUpRight size={21} weight="regular" class="shrink-0 text-stone-900" aria-hidden="true" />
+            <ArrowUpRightIcon size={21} weight="regular" class="shrink-0 text-stone-900" aria-hidden="true" />
           </a>
         {/each}
       </nav>
