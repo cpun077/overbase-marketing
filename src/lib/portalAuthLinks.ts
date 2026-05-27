@@ -7,7 +7,7 @@ function isSafeRelativePath(path: string) {
   return path.startsWith('/') && !path.startsWith('//');
 }
 
-export function createMarketingReturnUrl(path: string) {
+function createMarketingReturnUrl(path: string) {
   if (!isSafeRelativePath(path)) {
     return new URL('/', MARKETING_ORIGIN).href;
   }
@@ -15,7 +15,7 @@ export function createMarketingReturnUrl(path: string) {
   return new URL(path, MARKETING_ORIGIN).href;
 }
 
-export function createPortalAuthUrl(route: PortalAuthRoute, marketingReturnUrl: string) {
+function createPortalAuthUrl(route: PortalAuthRoute, marketingReturnUrl: string) {
   const url = new URL(`/${route}`, PORTAL_ORIGIN);
   url.searchParams.set('returnTo', marketingReturnUrl);
   return url.href;

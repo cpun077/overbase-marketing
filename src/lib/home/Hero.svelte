@@ -3,7 +3,7 @@
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
   import ButtonLink from '$lib/ui/ButtonLink.svelte';
   import { createPortalAuthUrlForMarketingPath } from '$lib/portalAuthLinks';
-  import HeroCustomerProof from './HeroCustomerProof.svelte';
+  import HeroIndustryProof from './HeroIndustryProof.svelte';
 
   const joinHref = createPortalAuthUrlForMarketingPath('join', '/');
 </script>
@@ -40,7 +40,7 @@
   </div>
 
   <div class="hero-proof mt-[66px] w-full translate-y-[4px] opacity-0 will-change-[transform,opacity] md:mt-[70px]">
-    <HeroCustomerProof />
+    <HeroIndustryProof />
   </div>
   </ContentMeasure>
 </section>

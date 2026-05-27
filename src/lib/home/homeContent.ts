@@ -13,14 +13,6 @@ import {
   UserListIcon,
 } from "phosphor-svelte";
 import type { Component } from "svelte";
-import type { PageMeta } from "$lib/page/pageMeta";
-
-type HomeFeatureKey = "dataSources" | "partnerSharing" | "opportunityEmail";
-
-type HomeFeatureContent = {
-  title: string;
-  body: string;
-};
 
 type DataSourceItem = {
   label: string;
@@ -31,33 +23,6 @@ type PartnerDataShare = {
   partnerName: string;
   dataSourceSummary: string;
   dataSourceCoverage: number;
-};
-
-type HeroCustomerProofItem = {
-  customerName: string;
-  proofLabel: string;
-};
-
-export const homePageContent = {
-  title: "Overbase - Share sales data",
-  description:
-    "Overbase helps professional services firms share sales data with ecosystem partners and receive revenue opportunities by email.",
-  features: {
-    dataSources: {
-      title: "Share your data",
-      body: "Share any structured data like CRM and share any unstructured data like email. Easily share even your most disconnected data",
-    },
-    partnerSharing: {
-      title: "Partners share their data",
-      body: "Your ecosystem partners can share data with you for free and securely. They stay in full control of what gets shared",
-    },
-    opportunityEmail: {
-      title: "Get opportunities by email",
-      body: "We compare both sides, then we send revenue opportunities to your team by email",
-    },
-  },
-} as const satisfies PageMeta & {
-  features: Record<HomeFeatureKey, HomeFeatureContent>;
 };
 
 export const dataSourceItems = [
@@ -92,22 +57,3 @@ export const partnerDataShares = [
     dataSourceCoverage: 0.14,
   },
 ] as const satisfies readonly PartnerDataShare[];
-
-export const heroCustomerProofItems = [
-  {
-    customerName: "WSP",
-    proofLabel: "Customer using Overbase for partner-sourced revenue",
-  },
-  {
-    customerName: "Nielsen",
-    proofLabel: "Customer using Overbase for email-delivered opportunities",
-  },
-  {
-    customerName: "Kensington",
-    proofLabel: "Reference customer sharing sales data with partners",
-  },
-  {
-    customerName: "Brightfield",
-    proofLabel: "Reference customer receiving partner opportunity emails",
-  },
-] as const satisfies readonly HeroCustomerProofItem[];

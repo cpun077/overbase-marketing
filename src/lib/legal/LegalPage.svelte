@@ -1,13 +1,10 @@
 <script lang="ts">
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
   import PageFrame from '$lib/page/PageFrame.svelte';
-  import SeoHead from '$lib/page/SeoHead.svelte';
   import type { LegalPageContent } from './legalPages';
 
   let { page }: { page: LegalPageContent } = $props();
 </script>
-
-<SeoHead meta={page} />
 
 <PageFrame topPadding="standard">
   <ContentMeasure as="article" width="narrow">

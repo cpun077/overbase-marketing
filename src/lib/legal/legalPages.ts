@@ -1,15 +1,14 @@
-import type { PageMeta } from '$lib/page/pageMeta';
-
-export type LegalSection = {
+type LegalSection = {
   title: string;
-  paragraphs: string[];
+  paragraphs: readonly string[];
 };
 
-export type LegalPageContent = PageMeta & {
+export type LegalPageContent = {
   slug: string;
   label: string;
+  title: string;
   updatedAt: string;
-  sections: LegalSection[];
+  sections: readonly LegalSection[];
 };
 
 const sharedClosingSection: LegalSection = {
@@ -20,12 +19,11 @@ const sharedClosingSection: LegalSection = {
   ]
 };
 
-export const legalPages = [
+const legalPages = [
   {
     slug: 'terms-of-service',
     label: 'Terms',
     title: 'Terms of Use',
-    description: 'Terms of use for Overbase.',
     updatedAt: '05/26/2026',
     sections: [
       {
@@ -57,7 +55,6 @@ export const legalPages = [
     slug: 'dpa',
     label: 'DPA',
     title: 'Data Processing Addendum',
-    description: 'Data processing addendum for Overbase.',
     updatedAt: '05/26/2026',
     sections: [
       {
@@ -88,7 +85,6 @@ export const legalPages = [
     slug: 'security',
     label: 'Security',
     title: 'Security',
-    description: 'Security practices for Overbase.',
     updatedAt: '05/26/2026',
     sections: [
       {
@@ -116,8 +112,6 @@ export const legalPages = [
     ]
   }
 ] as const satisfies LegalPageContent[];
-
-export type LegalSlug = (typeof legalPages)[number]['slug'];
 
 export const legalNavigationItems = legalPages.map(({ label }) => ({
   label,

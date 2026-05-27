@@ -5,32 +5,28 @@
   import OpportunityEmailGraphic from './OpportunityEmailGraphic.svelte';
   import PartnerDataSharingGraphic from './PartnerDataSharingGraphic.svelte';
   import TestimonialsSection from './TestimonialsSection.svelte';
-  import SeoHead from '$lib/page/SeoHead.svelte';
-  import { homePageContent } from './homeContent';
 </script>
-
-<SeoHead meta={homePageContent} />
 
 <main>
   <Hero />
   <div class="flex flex-col gap-[112px] pb-[112px] pt-[160px] md:gap-[150px] md:pb-[150px] md:pt-[220px]">
     <FeatureSection
-      title={homePageContent.features.dataSources.title}
-      body={homePageContent.features.dataSources.body}
+      title="Share your data"
+      body="Share any structured data like CRM and share any unstructured data like email. Easily share even your most disconnected data"
     >
       <DataSourceGridGraphic />
     </FeatureSection>
 
     <FeatureSection
-      title={homePageContent.features.partnerSharing.title}
-      body={homePageContent.features.partnerSharing.body}
+      title="Partners share their data"
+      body="Your ecosystem partners can share data with you for free and securely. They stay in full control of what gets shared"
     >
       <PartnerDataSharingGraphic />
     </FeatureSection>
 
     <FeatureSection
-      title={homePageContent.features.opportunityEmail.title}
-      body={homePageContent.features.opportunityEmail.body}
+      title="Get opportunities by email"
+      body="We compare both sides, then we send revenue opportunities to your team by email"
     >
       <OpportunityEmailGraphic />
     </FeatureSection>

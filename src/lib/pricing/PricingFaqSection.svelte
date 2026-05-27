@@ -1,6 +1,10 @@
 <script lang="ts">
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
-  import type { PricingFaqItem } from './pricingContent';
+
+  type PricingFaqItem = {
+    question: string;
+    answer: string;
+  };
 
   let {
     items

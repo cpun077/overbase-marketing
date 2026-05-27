@@ -1,7 +1,15 @@
 <script lang="ts">
   import { CheckIcon } from 'phosphor-svelte';
   import ButtonLink from '$lib/ui/ButtonLink.svelte';
-  import type { PricingPlan } from './pricingContent';
+
+  type PricingPlan = {
+    price: string;
+    priceLabel: string;
+    name: string;
+    description: string;
+    ctaLabel: string;
+    benefits: readonly string[];
+  };
 
   let {
     joinHref,

@@ -10,11 +10,11 @@ import type { Component } from "svelte";
 
 const renewalOpportunityEmail = `Hi Stephen,
 
-The report for the upcoming Exterra renewal is attached.
+A report for the Exterra renewal is attached.
 
-We identified new policies worth $400,000 which you might propose to them at your renewal meeting next month.
+We identified new policies worth $400,000 which you might propose at your renewal meeting next month.
 
-Each proposed policy has a benchmark and those were calculated with data from Allianz and Chubb. The right people from both carriers are CCed.`;
+Each proposed policy has a benchmark. Those were calculated with data from Allianz and Chubb. The right people from both carriers are CCed.`;
 
 const lawFirmOpportunityEmail = `Hi Shayne,
 Hi Laura,
@@ -38,30 +38,26 @@ https://blinks.bloomberg.com/rooms/IB_ROOM_ID_98725`;
 
 const consultingOpportunityEmail = `Hi Amira,
 
-You have an upcoming meeting with Juan Mendoza at PepsiCo. As you know, Nicolas has been encouraging folks to "bring the firm" to this type of meeting.
+You have a meeting with Juan Mendoza at PepsiCo. And as you know, Nicolas is encouraging folks to "bring the firm" to meetings when possible.
 
-Assuming that it's appropriate to bring someone, you might consider Ajay Agrawal from the tech team who could help identify cyber challenges.
+You might consider inviting Ajay Agrawal from the tech team who could help PepsiCo identify cyber challenges.
 
-The Food and Beverage industry has seen a sharp rise in cyber issues in the past quarter. And they've been purchasing more cyber services from Datadog and other partners.`;
+Food and Beverage has seen a rise in cyber needs in the past quarter. They've also purchased more cyber from Datadog and other partners.`;
 
-const itOpportunityEmail = `Hi Ethan,
+const techOpportunityEmail = `Hi Ethan,
 
-A few different people from the Chevron account have mentioned 'legacy identity systems' in recent calls.
+A few people from the Chevron account mentioned 'legacy identity systems' in recent calls. They also mentioned authentication delays on calls with Microsoft and other partners.
 
-They also mentioned authentication delays on calls with Microsoft and other partners.
-
-This may or may not be a cue to discuss identity modernization or managed access governance. But you might want to check out the recordings.
+This may be a cue to discuss identity modernization. And you might check out these recordings:
 
 https://gong.io/c/492047116583921046
 https://gong.io/c/305819475021384759`;
 
 const marketingOpportunityEmail = `Hi Ram,
 
-A few different people from the Walmart account have mentioned 'site migration' in recent calls.
+A few people from the Walmart account mentioned 'site migration' in recent calls. They also mentioned this on calls with Salesforce and other partners.
 
-They also mentioned this on calls with Salesforce and other partners.
-
-This may or may not be a cue to sell SEO migration support. But you might want to check out the recordings.
+This may be a cue to discuss SEO migration support. And you might check out these recordings:
 
 https://gong.io/c/749201847502910472
 https://gong.io/c/305819475021384759`;
@@ -72,43 +68,53 @@ export const opportunityIndustries = [
     label: "Insurance",
     icon: UmbrellaIcon,
     email: renewalOpportunityEmail,
+    heroProofLabel: "See how brokers and carriers use Overbase",
   },
   {
     id: "law",
     label: "Law",
     icon: ScalesIcon,
     email: lawFirmOpportunityEmail,
+    heroProofLabel: "See how law firms use Overbase",
   },
   {
     id: "finance",
     label: "Finance",
     icon: BankIcon,
     email: financeOpportunityEmail,
+    heroProofLabel: "See how bankers use Overbase",
   },
   {
     id: "consulting",
     label: "Consulting",
     icon: HandshakeIcon,
     email: consultingOpportunityEmail,
+    heroProofLabel: "See how consulting firms use Overbase",
   },
   {
-    id: "it",
-    label: "IT",
+    id: "tech",
+    label: "Tech",
     icon: DesktopTowerIcon,
-    email: itOpportunityEmail,
+    email: techOpportunityEmail,
+    heroProofLabel: "See how tech and digital consulting firms use Overbase",
   },
   {
     id: "marketing",
     label: "Marketing",
     icon: MegaphoneIcon,
     email: marketingOpportunityEmail,
+    heroProofLabel: "See how agencies use Overbase",
   },
 ] as const satisfies ReadonlyArray<{
   id: string;
   label: string;
   icon: Component;
   email: string;
+  heroProofLabel: string;
 }>;
 
 export type OpportunityIndustry = (typeof opportunityIndustries)[number];
 export type OpportunityIndustryId = OpportunityIndustry["id"];
+
+export const getIndustryHref = (industryId: OpportunityIndustryId) =>
+  `/industries/${industryId}`;
