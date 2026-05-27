@@ -1,15 +1,16 @@
 <script lang="ts">
   import {
     BankIcon,
-    BuildingsIcon,
+    DesktopTowerIcon,
     HandshakeIcon,
+    MegaphoneIcon,
     ScalesIcon,
     UmbrellaIcon
   } from 'phosphor-svelte';
   import DeveloperActionDropdown from './DeveloperActionDropdown.svelte';
   import type { Component } from 'svelte';
 
-  type DeveloperPersonaId = 'insurance' | 'law' | 'consulting' | 'real-estate' | 'finance';
+  type DeveloperPersonaId = 'insurance' | 'law' | 'consulting' | 'it' | 'marketing' | 'finance';
 
   type DeveloperExperienceAction = {
     id: string;
@@ -32,6 +33,58 @@ We identified new policies worth $400,000 which you might propose to them at you
 
 Each proposed policy has a benchmark and those were calculated with data from Allianz and Chubb. The right people from both carriers are CCed.`;
 
+  const lawFirmOpportunityEmail = `Hi Shayne,
+Hi Laura,
+
+An activist hedge fund bought a 5% stake in ADP.
+
+You might want to see if this could be relevant to one of your partners, Shayne. And to one of your bankers, Laura.
+
+Discussion in a Bloomberg forum:
+https://blinks.bloomberg.com/rooms/IB_ROOM_ID_98725`;
+
+  const financeOpportunityEmail = `Hi Shayne,
+Hi Laura,
+
+An activist hedge fund bought a 5% stake in ADP.
+
+You might want to see if this could be relevant to one of your partners, Shayne. And to one of your bankers, Laura.
+
+Discussion in a Bloomberg forum:
+https://blinks.bloomberg.com/rooms/IB_ROOM_ID_98725`;
+
+  const consultingOpportunityEmail = `Hi Amira,
+
+You have an upcoming meeting with Juan Mendoza at PepsiCo.
+
+As you know, Nicolas has been encouraging folks to "bring the firm" to this type of meeting.
+
+Assuming that it's appropriate to bring someone, here's a colleagues you might invite: Ajay Agrawal from the tech team might be able to help identify cyber challenges
+
+The Food and Beverage industry has seen a sharp rise in cyber issues in the past quarter. They've been purchasing more cyber services from Datadog and other partners.`;
+
+  const itOpportunityEmail = `Hi Ethan,
+
+A few different people from the Chevron account have mentioned 'legacy identity systems' in recent calls.
+
+They also mentioned authentication delays and access reviews on calls with Microsoft and other partners.
+
+This may or may not be a cue to discuss identity modernization or managed access governance. But you might want to check out the recordings.
+
+https://gong.io/c/492047116583921046
+https://gong.io/c/305819475021384759`;
+
+  const marketingOpportunityEmail = `Hi Ram,
+
+A few different people from the Walmart account have mentioned 'site migration' in recent calls.
+
+They also mentioned this on calls with Salesforce and other partners.
+
+This may or may not be a cue to sell SEO migration support. But you might want to check out the recordings.
+
+https://gong.io/c/749201847502910472
+https://gong.io/c/305819475021384759`;
+
   const developerExperiencePersonas: DeveloperExperiencePersona[] = [
     {
       id: 'insurance',
@@ -39,23 +92,8 @@ Each proposed policy has a benchmark and those were calculated with data from Al
       icon: UmbrellaIcon,
       actions: [
         {
-          id: 'create-contact',
-          label: 'Create contact',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'update-contact',
-          label: 'Update contact',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'track-event',
-          label: 'Track event',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'add-contact-property',
-          label: 'Add contact property',
+          id: 'example',
+          label: 'Whitespace analysis',
           code: renewalOpportunityEmail
         }
       ]
@@ -66,68 +104,9 @@ Each proposed policy has a benchmark and those were calculated with data from Al
       icon: ScalesIcon,
       actions: [
         {
-          id: 'create-contact',
-          label: 'Create contact',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'sync-contact-properties',
-          label: 'Sync contact properties',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'analyze-event-stream',
-          label: 'Analyze event stream',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'generate-lifecycle-segment',
-          label: 'Generate lifecycle segment',
-          code: renewalOpportunityEmail
-        }
-      ]
-    },
-    {
-      id: 'consulting',
-      label: 'Consulting',
-      icon: HandshakeIcon,
-      actions: [
-        {
-          id: 'create-opportunity',
-          label: 'Create opportunity',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'score-engagement-fit',
-          label: 'Score engagement fit',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'route-consulting-intro',
-          label: 'Route intro',
-          code: renewalOpportunityEmail
-        }
-      ]
-    },
-    {
-      id: 'real-estate',
-      label: 'Real Estate',
-      icon: BuildingsIcon,
-      actions: [
-        {
-          id: 'match-property-owners',
-          label: 'Match property owners',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'sync-property-profile',
-          label: 'Sync property profile',
-          code: renewalOpportunityEmail
-        },
-        {
-          id: 'create-owner-intro',
-          label: 'Create owner intro',
-          code: renewalOpportunityEmail
+          id: 'example',
+          label: 'Reason to connect',
+          code: lawFirmOpportunityEmail
         }
       ]
     },
@@ -137,19 +116,45 @@ Each proposed policy has a benchmark and those were calculated with data from Al
       icon: BankIcon,
       actions: [
         {
-          id: 'identify-capital-need',
-          label: 'Identify capital need',
-          code: renewalOpportunityEmail
-        },
+          id: 'example',
+          label: 'Reason to connect',
+          code: financeOpportunityEmail
+        }
+      ]
+    },
+    {
+      id: 'consulting',
+      label: 'Consulting',
+      icon: HandshakeIcon,
+      actions: [
         {
-          id: 'sync-underwriting-profile',
-          label: 'Sync underwriting profile',
-          code: renewalOpportunityEmail
-        },
+          id: 'example',
+          label: 'Bring the firm',
+          code: consultingOpportunityEmail
+        }
+      ]
+    },
+    {
+      id: 'it',
+      label: 'IT',
+      icon: DesktopTowerIcon,
+      actions: [
         {
-          id: 'route-finance-opportunity',
-          label: 'Route opportunity',
-          code: renewalOpportunityEmail
+          id: 'example',
+          label: 'Call analytics',
+          code: itOpportunityEmail
+        }
+      ]
+    },
+    {
+      id: 'marketing',
+      label: 'Marketing',
+      icon: MegaphoneIcon,
+      actions: [
+        {
+          id: 'example',
+          label: 'Call analytics',
+          code: marketingOpportunityEmail
         }
       ]
     }
@@ -177,7 +182,7 @@ Each proposed policy has a benchmark and those were calculated with data from Al
 </script>
 
 <div
-  class="flex h-[430px] flex-col overflow-hidden rounded-[8px] border border-stone-200/70 bg-white shadow-[0_1px_0_rgba(48,47,45,0.03)]"
+  class="flex h-[460px] flex-col overflow-hidden rounded-[8px] border border-stone-200/70 bg-white shadow-[0_1px_0_rgba(48,47,45,0.03)]"
 >
   <div
     class="flex min-h-[52px] flex-col gap-[10px] border-b border-stone-200/70 bg-stone-50 px-[12px] py-[10px] sm:flex-row sm:items-start sm:justify-between sm:px-[13px]"

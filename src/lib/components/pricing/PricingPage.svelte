@@ -14,7 +14,7 @@
   const faqItems = [
     {
       question: "Wait, what's your price again?",
-      answer: 'We charge 6% of the net new revenue we help generate. You only pay after you get paid and everything else is free'
+      answer: 'We charge 5% of the net new revenue we help generate. You only pay after you get paid and everything else is free'
     },
     {
       question: 'Do my partners pay anything?',
@@ -22,11 +22,11 @@
     },
     {
       question: 'How does success-based pricing work?',
-      answer: 'You pay 6% of the net new revenue we generate together, and you only pay after you get paid. Revenue is attributed by your team in a self-reported way. Typically, companies need to be referred by one of their partners and share their CRM data with us to qualify'
+      answer: 'You pay 5% of the net new revenue we generate together, and you only pay after you get paid. Revenue is attributed by your team in a self-reported way. Typically, companies need to be referred by one of their partners and share their CRM data with us to qualify'
     },
     {
       question: 'Are there any upfront costs at all?',
-      answer: 'Some companies pay $25,000 for a proof of concept. You need to share your CRM data to qualify for success-based pricing. Some companies prefer to get familiar with our tech before sharing their CRM data. In these cases, you can pay $25,000 for a proof of concept before transitioning to performance pricing'
+      answer: 'Some companies pay $25,000 for a proof of concept. You need to share your CRM data to qualify for success-based pricing. Some companies prefer to get familiar with our tech before sharing their CRM data. In these cases, you can pay $25,000 for a proof of concept before transitioning to success-based pricing'
     }
   ] as const;
 </script>
@@ -52,7 +52,7 @@
     <article class="mt-[43px] rounded-[15px] border border-stone-200/70 bg-white px-[25px] py-[34px] md:px-[25px] md:py-[34px]">
       <div>
         <div class="font-heading text-[38px] font-normal leading-none tracking-normal text-stone-900">
-          6%
+          5%
         </div>
         <div class="mt-[6px] text-[14px] leading-none tracking-normal text-stone-500">
           of revenue
@@ -64,11 +64,11 @@
           Success based
         </h2>
         <p class="mt-[12px] text-[14px] font-normal leading-normal tracking-normal text-stone-500">
-          Pay 6% of the revenue we help you generate and only pay after you get paid
+          Pay 5% of the revenue we help you generate and only pay after you get paid
         </p>
 
         <div class="mt-[22px]">
-          <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" fullWidth>Get started</ButtonLink>
+          <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" fullWidth>Join now</ButtonLink>
         </div>
       </div>
 

@@ -33,7 +33,7 @@
   </p>
 
   <div class="hero-actions mt-[54px] flex translate-y-[4px] items-center gap-[9px] opacity-0 will-change-[transform,opacity] md:mt-[44px] md:justify-center">
-    <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" textSize="compact">Get started</ButtonLink>
+    <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" textSize="compact">Join now</ButtonLink>
     <ButtonLink href="https://cal.com/juliennewman" target="_blank" rel="noopener noreferrer" variant="secondary" size="large" textSize="compact">Request demo</ButtonLink>
   </div>
 </section>

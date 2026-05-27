@@ -1,4 +1,4 @@
-import type { PortalAuthRoute } from '$lib/portalAuthLinks';
+import type { PortalAuthRoute } from "$lib/portalAuthLinks";
 
 export type SiteNavItem = {
   label: string;
@@ -8,7 +8,7 @@ export type SiteNavItem = {
 export type HeaderActionItem = {
   label: string;
   authRoute: PortalAuthRoute;
-  variant: 'primary' | 'secondary';
+  variant: "primary" | "secondary";
 };
 
 export const siteNavItems: SiteNavItem[] = [
@@ -19,5 +19,5 @@ export const siteNavItems: SiteNavItem[] = [
 
 export const headerActionItems: HeaderActionItem[] = [
   { label: "Log in", authRoute: "login", variant: "secondary" },
-  { label: "Start", authRoute: "join", variant: "primary" },
+  { label: "Join", authRoute: "join", variant: "primary" },
 ];

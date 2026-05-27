@@ -41,8 +41,8 @@
             "{testimonial.quote}"
           </blockquote>
 
-          <figcaption class="mt-[14px] text-[14px] font-normal leading-none tracking-normal text-stone-500 md:text-[15px]">
-            {testimonial.name}, {testimonial.role}, <span class="font-normal text-stone-600">{testimonial.company}</span>
+          <figcaption class="mt-[14px] text-[14px] font-normal leading-none tracking-normal text-stone-400 md:text-[15px]">
+            {testimonial.name}, {testimonial.role}, <span class="font-normal text-stone-500">{testimonial.company}</span>
           </figcaption>
         </figure>
       {/each}

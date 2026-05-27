@@ -119,9 +119,9 @@ export const legalPages = [
 
 export type LegalSlug = (typeof legalPages)[number]['slug'];
 
-export const legalNavigationItems = legalPages.map(({ label, slug }) => ({
+export const legalNavigationItems = legalPages.map(({ label }) => ({
   label,
-  href: `/legal/${slug}`
+  href: '#'
 }));
 
 export const getLegalPage = (slug: string) => legalPages.find((page) => page.slug === slug);
