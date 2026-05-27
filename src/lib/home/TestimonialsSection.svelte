@@ -1,12 +1,5 @@
 <script lang="ts">
-  type Testimonial = {
-    quote: string;
-    name: string;
-    role: string;
-    company: string;
-  };
-
-  const testimonials: Testimonial[] = [
+  const testimonials = [
     {
       quote: 'Overbase increased our revenue from partnerships by 20%',
       name: "Alex L'Heureux",
@@ -28,7 +21,7 @@
       See why teams stick with Overbase
     </h2>
 
-    <p class="mt-[18px] max-w-[700px] text-[15px] font-normal leading-[1.55] tracking-normal text-stone-500 md:text-[16px] md:leading-[1.55]">
+    <p class="mt-[18px] max-w-[700px] text-[15px] font-normal leading-[1.55] tracking-normal text-stone-500 md:text-[16px]">
       We spend most of our time building things for the companies who already use Overbase and for their partners. Here are some nice things they've said
     </p>
 

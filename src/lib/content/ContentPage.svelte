@@ -27,20 +27,24 @@
     <div class="mt-[24px] flex max-w-[620px] flex-col gap-[22px]">
       {#each introParagraphs as paragraph}
         <p class="text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-          {#each paragraph as segment}
-            {#if segment.href}
-              <a href={segment.href} class={inlineLinkClasses}>
+          {#if typeof paragraph === 'string'}
+            {paragraph}
+          {:else}
+            {#each paragraph as segment}
+              {#if segment.href}
+                <a href={segment.href} class={inlineLinkClasses}>
+                  {segment.text}
+                </a>
+              {:else}
                 {segment.text}
-              </a>
-            {:else}
-              {segment.text}
-            {/if}
-          {/each}
+              {/if}
+            {/each}
+          {/if}
         </p>
       {/each}
     </div>
 
-    {#if links.length > 0}
+    {#if links.length}
       <nav class="mt-[42px]" aria-label="Page links">
         {#each links as link}
           <a

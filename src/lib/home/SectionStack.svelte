@@ -1,5 +1,3 @@
-<div class="pt-[128px] pb-[112px] md:pt-[170px] md:pb-[150px]">
-  <div class="flex flex-col gap-[112px] md:gap-[150px]">
-    <slot />
-  </div>
+<div class="flex flex-col gap-[112px] pb-[112px] pt-[128px] md:gap-[150px] md:pb-[150px] md:pt-[170px]">
+  <slot />
 </div>

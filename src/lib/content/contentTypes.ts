@@ -3,7 +3,7 @@ export type ContentTextSegment = {
   href?: string;
 };
 
-export type ContentParagraph = ContentTextSegment[];
+export type ContentParagraph = string | ContentTextSegment[];
 
 export type ContentLink = {
   label: string;

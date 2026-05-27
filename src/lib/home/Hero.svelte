@@ -28,7 +28,7 @@
   </h1>
 
   <p
-    class="hero-support mt-[28px] max-w-[430px] translate-y-[4px] text-left text-[22px] leading-[1.55] tracking-normal text-stone-500 opacity-0 will-change-[transform,opacity] md:mt-[26px] md:max-w-[520px] md:text-center md:text-[20px] md:leading-[1.55]"
+    class="hero-support mt-[28px] max-w-[430px] translate-y-[4px] text-left text-[22px] leading-[1.55] tracking-normal text-stone-500 opacity-0 will-change-[transform,opacity] md:mt-[26px] md:max-w-[520px] md:text-center md:text-[20px]"
   >
     Overbase lets professional services firms share sales data with your ecosystem partners
   </p>

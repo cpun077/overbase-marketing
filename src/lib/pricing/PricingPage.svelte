@@ -25,7 +25,7 @@
       Our pricing is success based. You pay a percentage of the net new revenue we help you generate
     </p>
 
-    <article class="mt-[43px] rounded-[15px] border border-stone-200/70 bg-white px-[25px] py-[34px] md:px-[25px] md:py-[34px]">
+    <article class="mt-[43px] rounded-[15px] border border-stone-200/70 bg-white px-[25px] py-[34px]">
       <div>
         <div class="font-heading text-[38px] font-normal leading-none tracking-normal text-stone-900">
           5%

@@ -12,19 +12,19 @@
 
   const sizeClasses = {
     small: 'h-[36px] px-[14px]',
-    default: 'h-[43px] px-[16px] md:h-[40px] md:px-[16px]',
+    default: 'h-[43px] px-[16px] md:h-[40px]',
     large: 'h-[50px] px-[23px] md:h-[48px] md:px-[22px]'
   };
 
   const textSizeClasses = {
     default: {
       small: 'text-[14px]',
-      default: 'text-[15px] md:text-[15px]',
+      default: 'text-[15px]',
       large: 'text-[17px] md:text-[16px]'
     },
     compact: {
       small: 'text-[13px]',
-      default: 'text-[14px] md:text-[14px]',
+      default: 'text-[14px]',
       large: 'text-[15px] md:text-[14px]'
     }
   };

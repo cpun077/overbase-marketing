@@ -1,11 +1,5 @@
 <script lang="ts">
-  type PartnerDataShare = {
-    partnerName: string;
-    dataSourceSummary: string;
-    dataSourceCoverage: number;
-  };
-
-  const partnerDataShares: PartnerDataShare[] = [
+  const partnerDataShares = [
     {
       partnerName: 'Kensington, Blake & Thorne',
       dataSourceSummary: 'all data sources',
@@ -36,19 +30,17 @@
   </div>
 
   <div class="mt-[20px] overflow-hidden rounded-[6px] border border-stone-200/70 bg-white">
-    {#each partnerDataShares as partnerDataShare, index}
-      <article class:border-b={index < partnerDataShares.length - 1} class="border-stone-200/70 px-[12px] py-[18px] md:px-[12px] md:py-[19px]">
+    {#each partnerDataShares as partnerDataShare}
+      <article class="border-b border-stone-200/70 px-[12px] py-[18px] last:border-b-0 md:py-[19px]">
         <div class="flex items-start justify-between gap-4">
           <div class="min-w-0">
             <h4 class="truncate text-[14px] font-normal leading-[1.2] tracking-normal text-stone-700 md:text-[15px]">
               {partnerDataShare.partnerName}
             </h4>
 
-            <div class="mt-[14px] flex min-w-0 items-center gap-[6px]">
-              <span class="truncate text-[12px] leading-none tracking-normal text-stone-300 md:text-[13px]">
-                {partnerDataShare.dataSourceSummary}
-              </span>
-            </div>
+            <span class="mt-[14px] block truncate text-[12px] leading-none tracking-normal text-stone-300 md:text-[13px]">
+              {partnerDataShare.dataSourceSummary}
+            </span>
           </div>
         </div>
 

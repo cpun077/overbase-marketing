@@ -9,15 +9,6 @@
   } from 'phosphor-svelte';
   import type { Component } from 'svelte';
 
-  type OpportunityIndustryId = 'insurance' | 'law' | 'consulting' | 'it' | 'marketing' | 'finance';
-
-  type OpportunityIndustry = {
-    id: OpportunityIndustryId;
-    label: string;
-    icon: Component;
-    email: string;
-  };
-
   const renewalOpportunityEmail = `Hi Stephen,
 
 The report for the upcoming Exterra renewal is attached.
@@ -27,16 +18,6 @@ We identified new policies worth $400,000 which you might propose to them at you
 Each proposed policy has a benchmark and those were calculated with data from Allianz and Chubb. The right people from both carriers are CCed.`;
 
   const lawFirmOpportunityEmail = `Hi Shayne,
-Hi Laura,
-
-An activist hedge fund bought a 5% stake in ADP.
-
-You might want to see if this could be relevant to one of your partners, Shayne. And to one of your bankers, Laura.
-
-Discussion in a Bloomberg forum:
-https://blinks.bloomberg.com/rooms/IB_ROOM_ID_98725`;
-
-  const financeOpportunityEmail = `Hi Shayne,
 Hi Laura,
 
 An activist hedge fund bought a 5% stake in ADP.
@@ -78,7 +59,7 @@ This may or may not be a cue to sell SEO migration support. But you might want t
 https://gong.io/c/749201847502910472
 https://gong.io/c/305819475021384759`;
 
-  const opportunityIndustries: OpportunityIndustry[] = [
+  const opportunityIndustries = [
     {
       id: 'insurance',
       label: 'Insurance',
@@ -95,7 +76,7 @@ https://gong.io/c/305819475021384759`;
       id: 'finance',
       label: 'Finance',
       icon: BankIcon,
-      email: financeOpportunityEmail
+      email: lawFirmOpportunityEmail
     },
     {
       id: 'consulting',
@@ -115,18 +96,19 @@ https://gong.io/c/305819475021384759`;
       icon: MegaphoneIcon,
       email: marketingOpportunityEmail
     }
-  ];
+  ] as const satisfies ReadonlyArray<{
+    id: string;
+    label: string;
+    icon: Component;
+    email: string;
+  }>;
 
-  const firstIndustry = opportunityIndustries[0];
+  type OpportunityIndustryId = (typeof opportunityIndustries)[number]['id'];
 
-  let selectedIndustryId = firstIndustry.id;
+  let selectedIndustryId: OpportunityIndustryId = 'insurance';
 
   $: selectedIndustry =
-    opportunityIndustries.find((industry) => industry.id === selectedIndustryId) ?? firstIndustry;
-
-  function selectIndustry(industry: OpportunityIndustry) {
-    selectedIndustryId = industry.id;
-  }
+    opportunityIndustries.find((industry) => industry.id === selectedIndustryId) ?? opportunityIndustries[0];
 </script>
 
 <div
@@ -145,7 +127,7 @@ https://gong.io/c/305819475021384759`;
               : 'border border-transparent text-stone-400 hover:text-stone-600'
           }`}
           aria-pressed={selectedIndustryId === industry.id}
-          on:click={() => selectIndustry(industry)}
+          on:click={() => (selectedIndustryId = industry.id)}
         >
           <svelte:component this={industry.icon} size={15} weight="bold" />
           <span>{industry.label}</span>

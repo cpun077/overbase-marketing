@@ -1,5 +1,4 @@
 <script lang="ts">
-  import type { Component } from 'svelte';
   import {
     ChartLineUpIcon,
     CloudIcon,
@@ -15,12 +14,7 @@
     UserListIcon
   } from 'phosphor-svelte';
 
-  type DataSource = {
-    label: string;
-    icon: Component;
-  };
-
-  const dataSources: DataSource[] = [
+  const dataSources = [
     { label: 'Salesforce', icon: CloudIcon },
     { label: 'Outlook', icon: MicrosoftOutlookLogoIcon },
     { label: 'Snowflake', icon: SnowflakeIcon },
@@ -39,7 +33,7 @@
 <div class="grid grid-cols-1 gap-[12px] sm:grid-cols-2 md:grid-cols-3">
   {#each dataSources as dataSource}
     <div
-      class="flex h-[45px] items-center rounded-[8px] border border-stone-200/70 bg-white px-[13px] text-stone-700 md:h-[45px]"
+      class="flex h-[45px] items-center rounded-[8px] border border-stone-200/70 bg-white px-[13px] text-stone-700"
     >
       <span class="flex h-[25px] w-[25px] shrink-0 items-center justify-center text-stone-300">
         <dataSource.icon size={24} weight="regular" />

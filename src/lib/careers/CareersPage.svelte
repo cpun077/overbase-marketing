@@ -3,21 +3,9 @@
   import type { ContentLink, ContentParagraph, ContentSection } from '$lib/content/contentTypes';
 
   const careersIntro = [
-    [
-      {
-        text: "We only hire engineers. We hire 99.9th percentile most smart people. And we never hire anyone who has experience"
-      }
-    ],
-    [
-      {
-        text: "Reach out if you're an engineering undergrad at MIT or Stanford. Or a CS undergrad at IIT Bombay/Delhi with an AIR of 1 - 50 in the JEE"
-      }
-    ],
-    [
-      {
-        text: "We also don't care about your visa status"
-      }
-    ]
+    "We only hire engineers. We hire 99.9th percentile most smart people. And we never hire anyone who has experience",
+    "Reach out if you're an engineering undergrad at MIT or Stanford. Or a CS undergrad at IIT Bombay/Delhi with an AIR of 1 - 50 in the JEE",
+    "We also don't care about your visa status"
   ] satisfies ContentParagraph[];
 
   const careersLinks = [

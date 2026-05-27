@@ -7,9 +7,6 @@
   export let currentHash = '';
 
   let open = false;
-
-  $: MenuIcon = open ? XIcon : ListIcon;
-  $: menuIconSize = open ? 25 : 26;
 </script>
 
 <header class="fixed left-0 top-0 z-30 flex h-[50px] w-full items-center justify-between bg-white px-[20px] md:hidden">
@@ -24,7 +21,7 @@
     aria-expanded={open}
     on:click={() => (open = !open)}
   >
-    <svelte:component this={MenuIcon} size={menuIconSize} weight="regular" />
+    <svelte:component this={open ? XIcon : ListIcon} size={open ? 25 : 26} weight="regular" />
   </button>
 
   {#if open}
