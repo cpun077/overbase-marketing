@@ -13,7 +13,7 @@ export const homeIndustries = [
     id: "insurance",
     label: "Insurance",
     icon: UmbrellaIcon,
-    heroProofLabel: "See how brokers and carriers use Overbase",
+    heroProofLabel: "See how commercial brokers use Overbase",
   },
   {
     id: "law",
@@ -55,4 +55,5 @@ export const homeIndustries = [
 export type HomeIndustry = (typeof homeIndustries)[number];
 export type HomeIndustryId = HomeIndustry["id"];
 
-export const getIndustryHref = (industryId: HomeIndustryId) => `/industries/${industryId}`;
+export const getIndustryHref = (industryId: HomeIndustryId) =>
+  `/industries/${industryId}`;

@@ -10,6 +10,7 @@ export const load: PageLoad = ({ params }) => {
   }
 
   return {
+    industryId: params.industryId,
     content
   };
 };

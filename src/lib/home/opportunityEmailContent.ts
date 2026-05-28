@@ -1,8 +1,12 @@
-import { homeIndustries, type HomeIndustry, type HomeIndustryId } from "./industryContent";
+import {
+  homeIndustries,
+  type HomeIndustry,
+  type HomeIndustryId,
+} from "./industryContent";
 
 const renewalOpportunityEmail = `Hi Stephen,
 
-A report for the Exterra renewal is attached.
+A whitespace analysis for the Exterra renewal is attached.
 
 We identified new policies worth $400,000 which you might propose at your renewal meeting next month.
 

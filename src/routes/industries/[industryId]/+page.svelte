@@ -5,4 +5,6 @@
   let { data }: { data: PageData } = $props();
 </script>
 
-<IndustryPage content={data.content} />
+{#key data.industryId}
+  <IndustryPage content={data.content} />
+{/key}
