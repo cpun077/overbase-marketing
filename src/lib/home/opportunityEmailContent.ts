@@ -1,12 +1,4 @@
-import {
-  BankIcon,
-  DesktopTowerIcon,
-  HandshakeIcon,
-  MegaphoneIcon,
-  ScalesIcon,
-  UmbrellaIcon,
-} from "phosphor-svelte";
-import type { Component } from "svelte";
+import { homeIndustries, type HomeIndustry, type HomeIndustryId } from "./industryContent";
 
 const renewalOpportunityEmail = `Hi Stephen,
 
@@ -62,59 +54,22 @@ This may be a cue to discuss SEO migration support. And you might check out thes
 https://gong.io/c/749201847502910472
 https://gong.io/c/305819475021384759`;
 
-export const opportunityIndustries = [
-  {
-    id: "insurance",
-    label: "Insurance",
-    icon: UmbrellaIcon,
-    email: renewalOpportunityEmail,
-    heroProofLabel: "See how brokers and carriers use Overbase",
-  },
-  {
-    id: "law",
-    label: "Law",
-    icon: ScalesIcon,
-    email: lawFirmOpportunityEmail,
-    heroProofLabel: "See how law firms use Overbase",
-  },
-  {
-    id: "finance",
-    label: "Finance",
-    icon: BankIcon,
-    email: financeOpportunityEmail,
-    heroProofLabel: "See how bankers use Overbase",
-  },
-  {
-    id: "consulting",
-    label: "Consulting",
-    icon: HandshakeIcon,
-    email: consultingOpportunityEmail,
-    heroProofLabel: "See how consulting firms use Overbase",
-  },
-  {
-    id: "tech",
-    label: "Tech",
-    icon: DesktopTowerIcon,
-    email: techOpportunityEmail,
-    heroProofLabel: "See how tech and digital consulting firms use Overbase",
-  },
-  {
-    id: "marketing",
-    label: "Marketing",
-    icon: MegaphoneIcon,
-    email: marketingOpportunityEmail,
-    heroProofLabel: "See how agencies use Overbase",
-  },
-] as const satisfies ReadonlyArray<{
-  id: string;
-  label: string;
-  icon: Component;
+const opportunityEmailByIndustryId = {
+  insurance: renewalOpportunityEmail,
+  law: lawFirmOpportunityEmail,
+  finance: financeOpportunityEmail,
+  consulting: consultingOpportunityEmail,
+  tech: techOpportunityEmail,
+  marketing: marketingOpportunityEmail,
+} as const satisfies Record<HomeIndustryId, string>;
+
+export type OpportunityIndustry = HomeIndustry & {
   email: string;
-  heroProofLabel: string;
-}>;
+};
 
-export type OpportunityIndustry = (typeof opportunityIndustries)[number];
-export type OpportunityIndustryId = OpportunityIndustry["id"];
+export type OpportunityIndustryId = HomeIndustryId;
 
-export const getIndustryHref = (industryId: OpportunityIndustryId) =>
-  `/industries/${industryId}`;
+export const opportunityIndustries = homeIndustries.map((industry) => ({
+  ...industry,
+  email: opportunityEmailByIndustryId[industry.id],
+})) satisfies readonly OpportunityIndustry[];

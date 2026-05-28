@@ -1,10 +1,10 @@
 <script lang="ts">
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
-  import { getIndustryHref, opportunityIndustries } from './opportunityEmailContent';
+  import { getIndustryHref, homeIndustries } from '../industryContent';
 
   let selectedIndex = $state<number | null>(null);
   const selectedIndustry = $derived(
-    selectedIndex === null ? null : (opportunityIndustries[selectedIndex] ?? null)
+    selectedIndex === null ? null : (homeIndustries[selectedIndex] ?? null)
   );
 </script>
 
@@ -14,7 +14,7 @@
     aria-label="Industries"
     role="group"
   >
-    {#each opportunityIndustries as industry, index (industry.id)}
+    {#each homeIndustries as industry, index (industry.id)}
       <button
         type="button"
         class={[

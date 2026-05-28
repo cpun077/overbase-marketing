@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { partnerDataShares } from './homeContent';
+  import { partnerDataShares } from './partnerSharingContent';
 </script>
 
 <div class="rounded-[8px] border border-stone-200/70 bg-white px-[18px] py-[22px] shadow-[0_1px_0_rgba(48,47,45,0.03)] md:px-[21px] md:py-[24px]">

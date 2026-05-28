@@ -1,10 +1,10 @@
 <script lang="ts">
-  import DataSourceGridGraphic from './DataSourceGridGraphic.svelte';
-  import FeatureSection from './FeatureSection.svelte';
-  import Hero from './Hero.svelte';
-  import OpportunityEmailGraphic from './OpportunityEmailGraphic.svelte';
-  import PartnerDataSharingGraphic from './PartnerDataSharingGraphic.svelte';
-  import TestimonialsSection from './TestimonialsSection.svelte';
+  import DataSourceGridGraphic from './features/data-sources/DataSourceGridGraphic.svelte';
+  import OpportunityEmailGraphic from './features/opportunity-email/OpportunityEmailGraphic.svelte';
+  import PartnerDataSharingGraphic from './features/partner-sharing/PartnerDataSharingGraphic.svelte';
+  import TestimonialsSection from './features/testimonials/TestimonialsSection.svelte';
+  import Hero from './hero/Hero.svelte';
+  import FeatureSection from './shared/FeatureSection.svelte';
 </script>
 
 <main>

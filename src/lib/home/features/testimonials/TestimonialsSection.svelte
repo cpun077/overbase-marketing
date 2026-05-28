@@ -1,5 +1,5 @@
 <script lang="ts">
-  import HomeSection from './HomeSection.svelte';
+  import HomeSection from '../../shared/HomeSection.svelte';
   import { testimonials } from './testimonialsContent';
 </script>
 

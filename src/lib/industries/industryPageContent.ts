@@ -1,6 +1,8 @@
 type IndustryScreenshot = {
   src: string;
   alt: string;
+  width: number;
+  height: number;
 };
 
 type IndustryPageSection = {
@@ -9,248 +11,217 @@ type IndustryPageSection = {
   screenshot: IndustryScreenshot;
 };
 
-export type IndustryPageSectionGroup = {
-  id: string;
-  label: string;
-  sections: readonly IndustryPageSection[];
-};
-
 export type IndustryPageContent = {
   heading: string;
   introParagraphs: readonly string[];
-  sectionSelectorLabel?: string;
-  sectionGroups: readonly [IndustryPageSectionGroup, ...IndustryPageSectionGroup[]];
+  sections: readonly IndustryPageSection[];
 };
 
-const setupScreenshot = {
-  src: '/screenshots/Screenshot%202.png',
-  alt: 'Overbase format setup showing configurable questions for an opportunity email.'
-} satisfies IndustryScreenshot;
+type IndustryScreenshots = readonly [
+  setup: IndustryScreenshot,
+  emailFormat: IndustryScreenshot,
+  opportunityEmail: IndustryScreenshot,
+];
 
-const emailPreviewScreenshot = {
-  src: '/screenshots/Screenshot%201.png',
-  alt: 'Overbase generated opportunity email preview.'
-} satisfies IndustryScreenshot;
+type IndustryPageMetadata = {
+  heading: string;
+  screenshots: IndustryScreenshots;
+};
 
-const rulesScreenshot = {
-  src: '/screenshots/Screenshot%203.png',
-  alt: 'Overbase workflow showing rules, data sources, and feedback controls.'
-} satisfies IndustryScreenshot;
+const sharedIntroParagraphs = [
+  "Selling with ecosystem partners should create a steady stream of warm, high-fit opportunities that are easier to start and faster to close",
+  "But in practice, partnerships rarely work cleanly. Coordination is hard, overlap is hidden, and incentives get in the way. Overbase changes that",
+] as const;
+
+const sharedSectionCopy = [
+  {
+    screenshotIndex: 0,
+    heading: "Share data",
+    body: "Both you and your partners securely share sales data from wherever it lives. You stay in full control of what accesses what data",
+  },
+  {
+    screenshotIndex: 1,
+    heading: "Design email formats",
+    body: "Pick what insight you want your team to receive by email. Then design custom email formats that perfectly match how your team is already selling",
+  },
+  {
+    screenshotIndex: 2,
+    heading: "Get opportunities by email",
+    body: "Your team receives emails with actionable revenue opportunities right in their inbox. Nicely packaged up and with the right people CCed",
+  },
+] as const satisfies readonly {
+  screenshotIndex: 0 | 1 | 2;
+  heading: string;
+  body: string;
+}[];
+
+const buildSections = (
+  screenshots: IndustryScreenshots,
+): readonly IndustryPageSection[] =>
+  sharedSectionCopy.map((section) => ({
+    heading: section.heading,
+    body: section.body,
+    screenshot: screenshots[section.screenshotIndex],
+  }));
 
 const industryPages = {
   insurance: {
-    heading: 'Overbase for insurance teams',
-    introParagraphs: [
-      'Insurance teams already discuss useful sales context in renewal meetings, broker updates, carrier conversations, policy reviews, and CRM notes.',
-      'Overbase helps turn that context into a practical internal opportunity email, so the right producer, broker, carrier contact, or specialist can decide whether there is a useful next step.'
-    ],
-    sectionSelectorLabel: 'See how Overbase is used by',
-    sectionGroups: [
+    heading: "Overbase for insurance",
+    screenshots: [
       {
-        id: 'brokers',
-        label: 'Brokers',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can watch for cues around upcoming renewals, coverage gaps, client changes, benchmark differences, and carrier appetite. The format can be tuned around the questions a broker or producer already asks before a renewal conversation.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'When the context is strong enough, Overbase can assemble a concise email with the account, renewal timing, relevant policy area, supporting benchmark or carrier detail, and the people who may need to be involved.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Brokerage teams can adjust which systems matter, which signals should be ignored, and how producer feedback changes future suggestions. That makes the workflow easier to trust than a broad alert feed.',
-            screenshot: rulesScreenshot
-          }
-        ]
+        src: "/screenshots/insurance1.png",
+        alt: "Overbase add data source modal showing supported data source categories.",
+        width: 2378,
+        height: 1620,
       },
       {
-        id: 'carriers',
-        label: 'Carriers',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can watch for cues across broker updates, appetite conversations, loss trends, renewal plans, and policy benchmarks. The format can be tuned around the questions a carrier team needs answered before engaging a broker or account.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'When the context is strong enough, Overbase can assemble a concise email with the broker or account, relevant line of business, supporting appetite or benchmark detail, and the underwriting or distribution contact who may need to weigh in.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Carrier teams can adjust rules around appetite, region, broker relationship, approved data sources, and feedback from distribution or underwriting so suggestions stay grounded in real capacity.',
-            screenshot: rulesScreenshot
-          }
-        ]
-      }
-    ]
+        src: "/screenshots/Screenshot%201.png",
+        alt: "Overbase generated opportunity email preview.",
+        width: 2348,
+        height: 1308,
+      },
+      {
+        src: "/screenshots/email.png",
+        alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
+        width: 1408,
+        height: 1190,
+      },
+    ],
   },
   law: {
-    heading: 'Overbase for law firms',
-    introParagraphs: [
-      'Law firms often have useful growth signals distributed across client meetings, recordings, matter notes, CRM updates, and conversations with bankers or other advisers.',
-      'Overbase turns those signals into a restrained internal opportunity email that helps attorneys decide whether a client event deserves follow-up.'
-    ],
-    sectionGroups: [
+    heading: "Overbase for law firms",
+    screenshots: [
       {
-        id: 'overview',
-        label: 'Overview',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can look for context such as ownership changes, financing activity, executive transitions, disputes, regulatory pressure, or conversations where another practice might be relevant.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'The generated email can summarize the event, identify the client or prospect, include the source context, and suggest the attorney, banker, or practice contact who may be best placed to evaluate it.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Rules and feedback let teams narrow the workflow by practice, relationship owner, data source, client sensitivity, and what counts as a useful introduction rather than a generic cross-sell prompt.',
-            screenshot: rulesScreenshot
-          }
-        ]
-      }
-    ]
+        src: "/screenshots/law1.png",
+        alt: "Overbase add data source modal showing supported data source categories.",
+        width: 2378,
+        height: 1570,
+      },
+      {
+        src: "/screenshots/Screenshot%201.png",
+        alt: "Overbase generated opportunity email preview.",
+        width: 2348,
+        height: 1308,
+      },
+      {
+        src: "/screenshots/email.png",
+        alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
+        width: 1408,
+        height: 1190,
+      },
+    ],
   },
   finance: {
-    heading: 'Overbase for finance teams',
-    introParagraphs: [
-      'Coverage teams hear relevant signals in client meetings, market discussions, CRM notes, research workflows, and conversations with legal, product, or industry specialists.',
-      'Overbase helps organize that context into internal opportunity emails that are specific enough for a banker or coverage lead to evaluate quickly.'
-    ],
-    sectionGroups: [
+    heading: "Overbase for finance",
+    screenshots: [
       {
-        id: 'overview',
-        label: 'Overview',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can be configured around signals such as activist activity, refinancing windows, acquisition intent, capital structure changes, industry pressure, or a client asking repeated questions about a product area.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'The email can include the client, relevant event, supporting source, potential specialist, and why the signal might matter now, without asking teams to dig through scattered notes first.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Teams can shape rules around coverage ownership, product relevance, approved data sources, and feedback from bankers so the workflow becomes more precise over time.',
-            screenshot: rulesScreenshot
-          }
-        ]
-      }
-    ]
+        src: "/screenshots/finance1.png",
+        alt: "Overbase add data source modal showing supported data source categories.",
+        width: 2378,
+        height: 1620,
+      },
+      {
+        src: "/screenshots/Screenshot%201.png",
+        alt: "Overbase generated opportunity email preview.",
+        width: 2348,
+        height: 1308,
+      },
+      {
+        src: "/screenshots/email.png",
+        alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
+        width: 1408,
+        height: 1190,
+      },
+    ],
   },
   consulting: {
-    heading: 'Overbase for consulting firms',
-    introParagraphs: [
-      'Consulting firms often spot client needs in account meetings, partner conversations, delivery reviews, transcripts, and CRM notes before those needs become a formal scope discussion.',
-      'Overbase helps convert that context into an internal opportunity email that makes cross-practice collaboration easier to evaluate.'
-    ],
-    sectionGroups: [
+    heading: "Overbase for consulting firms",
+    screenshots: [
       {
-        id: 'overview',
-        label: 'Overview',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can look for repeated client needs, upcoming meetings, delivery risks, industry changes, partner technology signals, or situations where another practice may be helpful.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'The email can summarize the client context, explain why a specialist may be relevant, include the meeting or note that triggered the suggestion, and leave room for the account owner to decide.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Rules can reflect account plans, practice boundaries, client preferences, partner programs, and feedback from relationship owners so suggestions stay grounded in how the firm works.',
-            screenshot: rulesScreenshot
-          }
-        ]
-      }
-    ]
+        src: "/screenshots/consulting1.png",
+        alt: "Overbase add data source modal showing supported data source categories.",
+        width: 2378,
+        height: 1620,
+      },
+      {
+        src: "/screenshots/Screenshot%201.png",
+        alt: "Overbase generated opportunity email preview.",
+        width: 2348,
+        height: 1308,
+      },
+      {
+        src: "/screenshots/email.png",
+        alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
+        width: 1408,
+        height: 1190,
+      },
+    ],
   },
   tech: {
-    heading: 'Overbase for tech teams',
-    introParagraphs: [
-      'Tech teams hear buying signals in implementation calls, support escalations, partner meetings, architecture reviews, recordings, and CRM activity.',
-      'Overbase turns that context into internal opportunity emails that help account teams decide whether a modernization, integration, security, or services conversation is worth pursuing.'
-    ],
-    sectionGroups: [
+    heading: "Overbase for tech consulting",
+    screenshots: [
       {
-        id: 'overview',
-        label: 'Overview',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can be configured around phrases and patterns such as legacy systems, migration blockers, authentication issues, cloud cost pressure, partner mentions, or repeated implementation friction.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'The generated email can include the account, the technical signal, links back to recordings or notes, and the specialist or partner contact who may be relevant.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Teams can tune rules by product area, partner, region, account tier, data source, and feedback so Overbase notices the cues that match the actual sales motion.',
-            screenshot: rulesScreenshot
-          }
-        ]
-      }
-    ]
+        src: "/screenshots/consulting1.png",
+        alt: "Overbase add data source modal showing supported data source categories.",
+        width: 2378,
+        height: 1620,
+      },
+      {
+        src: "/screenshots/Screenshot%201.png",
+        alt: "Overbase generated opportunity email preview.",
+        width: 2348,
+        height: 1308,
+      },
+      {
+        src: "/screenshots/email.png",
+        alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
+        width: 1408,
+        height: 1190,
+      },
+    ],
   },
   marketing: {
-    heading: 'Overbase for marketing teams',
-    introParagraphs: [
-      'Marketing and agency teams often hear useful signals in client calls, platform partner conversations, commerce reviews, SEO audits, migration planning, CRM notes, and account updates.',
-      'Overbase turns those signals into internal opportunity emails that help account leads and specialists decide whether there is a timely service need.'
-    ],
-    sectionGroups: [
+    heading: "Overbase for agencies",
+    screenshots: [
       {
-        id: 'overview',
-        label: 'Overview',
-        sections: [
-          {
-            heading: 'Answer quick questions',
-            body: 'Overbase can be tuned around signals such as site migration, commerce replatforming, CRM cleanup, analytics changes, SEO risk, paid media shifts, or partner-platform activity.',
-            screenshot: setupScreenshot
-          },
-          {
-            heading: 'Design your email format',
-            body: 'The email can summarize the client, the signal, where it appeared, which specialist could help, and why the timing may matter for the account team.',
-            screenshot: emailPreviewScreenshot
-          },
-          {
-            heading: 'Set rules and link data',
-            body: 'Rules and feedback help teams avoid noisy alerts by narrowing suggestions to the services, platforms, partners, and client situations that actually fit the agency motion.',
-            screenshot: rulesScreenshot
-          }
-        ]
-      }
-    ]
-  }
-} as const satisfies Record<string, IndustryPageContent>;
+        src: "/screenshots/marketing1.png",
+        alt: "Overbase add data source modal showing supported data source categories.",
+        width: 2378,
+        height: 1620,
+      },
+      {
+        src: "/screenshots/Screenshot%201.png",
+        alt: "Overbase generated opportunity email preview.",
+        width: 2348,
+        height: 1308,
+      },
+      {
+        src: "/screenshots/email.png",
+        alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
+        width: 1408,
+        height: 1190,
+      },
+    ],
+  },
+} as const satisfies Record<string, IndustryPageMetadata>;
 
 type IndustryPageId = keyof typeof industryPages;
 
 const isIndustryPageId = (industryId: string): industryId is IndustryPageId =>
   industryId in industryPages;
 
-export const getIndustryPageContent = (industryId: string): IndustryPageContent | null => {
+export const getIndustryPageContent = (
+  industryId: string,
+): IndustryPageContent | null => {
   if (!isIndustryPageId(industryId)) {
     return null;
   }
 
-  return industryPages[industryId];
+  const page = industryPages[industryId];
+
+  return {
+    heading: page.heading,
+    introParagraphs: sharedIntroParagraphs,
+    sections: buildSections(page.screenshots),
+  };
 };

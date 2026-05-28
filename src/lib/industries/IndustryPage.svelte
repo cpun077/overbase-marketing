@@ -1,31 +1,9 @@
 <script lang="ts">
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
   import PageFrame from '$lib/page/PageFrame.svelte';
-  import IndustrySectionPills from './IndustrySectionPills.svelte';
   import type { IndustryPageContent } from './industryPageContent';
 
   let { content }: { content: IndustryPageContent } = $props();
-
-  let selectedSectionGroupId = $state('');
-  const defaultSectionGroupId = $derived(content.sectionGroups[0].id);
-  const activeSectionGroupId = $derived(selectedSectionGroupId || defaultSectionGroupId);
-
-  const selectedSectionGroup = $derived(
-    content.sectionGroups.find((group) => group.id === activeSectionGroupId) ?? content.sectionGroups[0]
-  );
-
-  $effect(() => {
-    if (
-      selectedSectionGroupId &&
-      !content.sectionGroups.some((group) => group.id === selectedSectionGroupId)
-    ) {
-      selectedSectionGroupId = '';
-    }
-  });
-
-  const selectSectionGroup = (groupId: string) => {
-    selectedSectionGroupId = groupId;
-  };
 </script>
 
 <PageFrame topPadding="standard">
@@ -42,19 +20,10 @@
           </p>
         {/each}
       </div>
-
-      {#if content.sectionGroups.length > 1}
-        <IndustrySectionPills
-          groups={content.sectionGroups}
-          label={content.sectionSelectorLabel}
-          selectedGroupId={activeSectionGroupId}
-          onselect={selectSectionGroup}
-        />
-      {/if}
     </header>
 
     <div class="mt-[72px] flex flex-col gap-[78px]">
-      {#each selectedSectionGroup.sections as section}
+      {#each content.sections as section}
         <section>
           <h2 class="font-heading text-[24px] font-medium leading-[1.15] tracking-normal text-stone-900">
             {section.heading}
@@ -65,10 +34,15 @@
           </p>
 
           <div class="mt-[32px]">
-            <div class="aspect-[16/10] overflow-hidden rounded-[8px] border border-stone-200 bg-stone-50">
+            <div
+              class="overflow-hidden rounded-[8px] bg-stone-50"
+              style:aspect-ratio={`${section.screenshot.width} / ${section.screenshot.height}`}
+            >
               <img
                 src={section.screenshot.src}
                 alt={section.screenshot.alt}
+                width={section.screenshot.width}
+                height={section.screenshot.height}
                 loading="lazy"
                 class="h-full w-full object-contain"
               />

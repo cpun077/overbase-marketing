@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { dataSourceItems } from './homeContent';
+  import { dataSourceItems } from './dataSourceContent';
 </script>
 
 <div class="grid grid-cols-1 gap-[12px] sm:grid-cols-2 md:grid-cols-3">
