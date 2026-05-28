@@ -27,6 +27,7 @@
       rel="noopener noreferrer"
       variant={item.variant}
       size="small"
+      textSize="compact"
     >
       {item.label}
     </ButtonLink>
