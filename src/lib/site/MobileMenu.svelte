@@ -2,7 +2,7 @@
   import { browser } from '$app/environment';
   import { afterNavigate } from '$app/navigation';
   import { page } from '$app/state';
-  import { authNavItems, primaryNavItems } from './navigation';
+  import { authNavItems, mobilePrimaryNavItems } from './navigation';
   import { createPortalAuthUrlForCurrentPage } from '$lib/portalAuthLinks';
 
   let currentHash = $state('');
@@ -24,7 +24,7 @@
   aria-label="Mobile primary"
 >
   <div class="flex flex-col">
-    {#each primaryNavItems as link (link.href)}
+    {#each mobilePrimaryNavItems as link (link.href)}
       <a
         href={link.href}
         class={[

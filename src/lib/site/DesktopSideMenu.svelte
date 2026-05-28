@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from '$app/state';
-  import { primaryNavItems } from './navigation';
+  import DesktopSideMenuFlyout from './DesktopSideMenuFlyout.svelte';
+  import { desktopPrimaryNavItems, industryNavItems } from './navigation';
 
   const activePath = $derived(page.url.pathname);
 </script>
@@ -15,7 +16,9 @@
   </a>
 
   <nav class="flex flex-col gap-[15px] text-[13.5px] font-normal leading-none text-stone-500">
-    {#each primaryNavItems as item (item.href)}
+    <DesktopSideMenuFlyout label="Industries" links={industryNavItems} {activePath} />
+
+    {#each desktopPrimaryNavItems as item (item.label)}
       <a
         href={item.href}
         class={[

@@ -12,10 +12,10 @@ export const insuranceContent = {
     opportunityGroups: [
       {
         emailFormat: {
-          src: "/screenshots/Screenshot%201.png",
+          src: "/screenshots/insurance2.png",
           alt: "Overbase generated opportunity email preview.",
           width: 2348,
-          height: 1308,
+          height: 1560,
         },
         opportunityEmail: {
           src: "/screenshots/insurance3.png",

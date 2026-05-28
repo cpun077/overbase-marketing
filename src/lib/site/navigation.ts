@@ -1,10 +1,22 @@
 import type { PortalAuthRoute } from '$lib/portalAuthLinks';
+import { industryNavigationItems } from '$lib/industries/industryNavigation';
 
-export const primaryNavItems = [
+export type NavLinkItem = {
+  label: string;
+  href: string;
+};
+
+export const mobilePrimaryNavItems = [
   { label: 'Pricing', href: '/pricing' },
   { label: 'Careers', href: '/careers' },
-  { label: 'About', href: '/about' },
-] satisfies { label: string; href: string }[];
+] satisfies NavLinkItem[];
+
+export const industryNavItems = industryNavigationItems.map(({ label, href }) => ({
+  label,
+  href,
+})) satisfies NavLinkItem[];
+
+export const desktopPrimaryNavItems = mobilePrimaryNavItems;
 
 export const authNavItems = [
   { label: 'Log in', authRoute: 'login', variant: 'secondary' },
