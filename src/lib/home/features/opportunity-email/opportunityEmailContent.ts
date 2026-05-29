@@ -32,13 +32,15 @@ You might want to see if this could be relevant to one of your bankers, Laura. A
 Discussion in a Bloomberg forum:
 https://blinks.bloomberg.com/rooms/IB_ROOM_ID_98725`;
 
-const consultingOpportunityEmail = `Hi Amira,
+const consultingOpportunityEmail = `Hey Alex,
 
-You have a meeting with Juan Mendoza at PepsiCo. And as you know, Nicolas is encouraging folks to "bring the firm" to meetings when possible.
+You're working the pitch for JPMC and Jack London (CCed) in our NYC office pitched them JPMC.
 
-You might consider inviting Ajay Agrawal from the tech team who could help PepsiCo identify cyber challenges.
+I attached the PDF of the final proposal Jack submitted to them. As well as other docs which might give useful context for your pitch.
 
-Food and Beverage has seen a rise in cyber needs in the past quarter. They've also purchased more cyber from Datadog and other partners.`;
+There's also a proposal our partner Thoughtworks submitted to them last month.
+
+Reply to this email if you have any questions and you want some other context.`;
 
 const techOpportunityEmail = `Hi Ethan,
 
