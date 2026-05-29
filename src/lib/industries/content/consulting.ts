@@ -21,7 +21,7 @@ export const consultingContent = {
           src: "/screenshots/consulting3_1.png",
           alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
           width: 1408,
-          height: 760,
+          height: 723,
         },
       },
       {
