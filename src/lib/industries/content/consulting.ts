@@ -12,7 +12,7 @@ export const consultingContent = {
     opportunityGroups: [
       {
         emailFormat: {
-          src: "/screenshots/consulting2_2.png",
+          src: "/screenshots/consulting2_1.png",
           alt: "Overbase generated opportunity email preview.",
           width: 2348,
           height: 1560,
