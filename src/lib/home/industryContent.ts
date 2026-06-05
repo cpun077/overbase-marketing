@@ -2,7 +2,6 @@ import {
   BankIcon,
   DesktopTowerIcon,
   HandshakeIcon,
-  MegaphoneIcon,
   ScalesIcon,
   UmbrellaIcon,
 } from "phosphor-svelte";
@@ -33,10 +32,6 @@ const homeIndustryMetadata = {
   tech: {
     icon: DesktopTowerIcon,
     heroProofLabel: "See how tech consulting firms use Overbase",
-  },
-  marketing: {
-    icon: MegaphoneIcon,
-    heroProofLabel: "See how agencies use Overbase",
   },
 } as const satisfies Record<IndustryId, {
   icon: Component;

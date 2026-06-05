@@ -2,7 +2,6 @@ import { consultingContent } from './content/consulting';
 import { financeContent } from './content/finance';
 import { insuranceContent } from './content/insurance';
 import { lawContent } from './content/law';
-import { marketingContent } from './content/marketing';
 import { techContent } from './content/tech';
 import type {
   IndustryContentDefinition,
@@ -39,7 +38,6 @@ const industryPages = {
   finance: financeContent,
   consulting: consultingContent,
   tech: techContent,
-  marketing: marketingContent,
 } as const satisfies Record<string, IndustryContentDefinition>;
 
 type IndustryPageId = keyof typeof industryPages;

@@ -3,8 +3,7 @@ export const industryNavigationItems = [
   { id: "law", label: "Law", href: "/industries/law" },
   { id: "finance", label: "Finance", href: "/industries/finance" },
   { id: "consulting", label: "Consulting", href: "/industries/consulting" },
-  { id: "tech", label: "Tech", href: "/industries/tech" },
-  { id: "marketing", label: "Marketing", href: "/industries/marketing" },
+  { id: "tech", label: "Tech consulting", href: "/industries/tech" },
 ] as const;
 
 export type IndustryNavigationItem = (typeof industryNavigationItems)[number];

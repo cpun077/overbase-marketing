@@ -51,22 +51,12 @@ This may be a cue to discuss identity modernization. And you might check out the
 https://gong.io/c/492047116583921046
 https://gong.io/c/305819475021384759`;
 
-const marketingOpportunityEmail = `Hi Ram,
-
-A few people from the Walmart account mentioned 'site migration' in recent calls. They also mentioned this on calls with Salesforce and other partners.
-
-This may be a cue to discuss SEO migration support. And you might check out these recordings:
-
-https://gong.io/c/749201847502910472
-https://gong.io/c/305819475021384759`;
-
 const opportunityEmailByIndustryId = {
   insurance: renewalOpportunityEmail,
   law: lawFirmOpportunityEmail,
   finance: financeOpportunityEmail,
   consulting: consultingOpportunityEmail,
   tech: techOpportunityEmail,
-  marketing: marketingOpportunityEmail,
 } as const satisfies Record<HomeIndustryId, string>;
 
 export type OpportunityIndustry = HomeIndustry & {
