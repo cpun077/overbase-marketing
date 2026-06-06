@@ -7,7 +7,7 @@ export type CareersPageContent = {
   title: string;
   paragraphs: readonly string[];
   links: readonly CareersPageLink[];
-  closingParagraph: string;
+  closingParagraphs: readonly string[];
 };
 
 export const careersPageContent = {
@@ -26,6 +26,8 @@ export const careersPageContent = {
       href: "https://drive.google.com/file/d/11chLFScixDu3RtAG5jKFw6UphwMp4FMF/view",
     },
   ],
-  closingParagraph:
+  closingParagraphs: [
     "Overbase is a forward deployed company. We relocate as a group to wherever customers need us most and work together from there",
+    "Our comp is well below market and we keep a 997 work schedule. Working here only makes sense if you're focused on pursuing excellence. And if you care deeply about collaborating with your intellectual peers",
+  ],
 } as const satisfies CareersPageContent;

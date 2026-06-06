@@ -35,8 +35,12 @@
   </ContentMeasure>
 
   <ContentMeasure as="section" width="narrow" class="mt-[64px] pb-[96px]">
-    <p class="max-w-[620px] text-[15px] font-normal leading-[1.55] tracking-normal text-stone-700 md:text-[16px]">
-      {careersPageContent.closingParagraph}
-    </p>
+    <div class="flex max-w-[620px] flex-col gap-[22px]">
+      {#each careersPageContent.closingParagraphs as paragraph}
+        <p class="text-[15px] font-normal leading-[1.55] tracking-normal text-stone-700 md:text-[16px]">
+          {paragraph}
+        </p>
+      {/each}
+    </div>
   </ContentMeasure>
 </PageFrame>

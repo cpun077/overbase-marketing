@@ -1,7 +1,7 @@
 import type { IndustryContentDefinition } from "../types";
 
 export const financeContent = {
-  heading: "Overbase for finance",
+  heading: "Overbase for investment bankers",
   screenshots: {
     setup: {
       src: "/screenshots/finance1.png",

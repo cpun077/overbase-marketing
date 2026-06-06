@@ -23,7 +23,7 @@ const homeIndustryMetadata = {
   },
   finance: {
     icon: BankIcon,
-    heroProofLabel: "See how bankers use Overbase",
+    heroProofLabel: "See how investment bankers use Overbase",
   },
   consulting: {
     icon: HandshakeIcon,
@@ -33,10 +33,13 @@ const homeIndustryMetadata = {
     icon: DesktopTowerIcon,
     heroProofLabel: "See how tech consulting firms use Overbase",
   },
-} as const satisfies Record<IndustryId, {
-  icon: Component;
-  heroProofLabel: string;
-}>;
+} as const satisfies Record<
+  IndustryId,
+  {
+    icon: Component;
+    heroProofLabel: string;
+  }
+>;
 
 export const homeIndustries = industryNavigationItems.map((industry) => ({
   ...industry,
