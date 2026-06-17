@@ -38,9 +38,7 @@ You're working the pitch for JPMC and Jack London (CCed) in our NYC office pitch
 
 I attached the PDF of the final proposal Jack submitted to them. As well as other docs which might give useful context for your pitch.
 
-There's also a proposal our partner Thoughtworks submitted to them last month.
-
-Reply to this email if you have any questions and you want some other context.`;
+There's also a proposal our partner Thoughtworks submitted to them last month.`;
 
 const techOpportunityEmail = `Hi Ethan,
 
