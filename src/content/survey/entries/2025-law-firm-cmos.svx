@@ -1,11 +1,11 @@
 <script context="module" lang="ts">
   export const post = {
-    title: 'Most innovative law firm CIOs',
+    title: 'Most innovative law firm CMOs',
     description:
-      'AmLaw 100 CIOs and AmLaw 100 firm leaders consistently pick these CIOs as the most innovative in the industry',
-    publishedAt: '2026-08-17',
+      'AmLaw 100 marketing teams consistently pick these CMOs as the most innovative in the legal industry.',
+    publishedAt: '2025-08-17',
     introduction:
-      'We surveyed the CIOs and leadership of the AmLaw 100 and these CIOs were consistently picked as the most innovative by their peers'
+      'We surveyed marketing teams at AmLaw 100 firms and these CMOs were consistently picked as the most innovative by their peers.'
   };
 </script>
 
@@ -18,7 +18,7 @@
   <SurveyProfile
     label="Best Use Of AI"
     title="Chris Leeks, CIO at Paul, Weiss"
-    imageSrc="/chris.png"
+    imageSrc="/cmos/katherinedurso.png"
     imageAlt="Black-and-white portrait of Chris over a blue patterned frame"
     caption="Chris Leeks was picked for Best use of AI"
   >
@@ -39,9 +39,9 @@
   </SurveyProfile>
 
   <SurveyProfile
-    label="Innovation in Cybersecurity"
+    label="Adoption & Change Management"
     title="Chris Leeks, CIO at Paul, Weiss"
-    imageSrc="/chris.png"
+    imageSrc="/cmos/trishlilley.png"
     imageAlt="Black-and-white portrait of Chris over a blue patterned frame"
     caption="Chris Leeks was picked for Innovation in Cybersecurity"
   >

@@ -9,8 +9,8 @@ const surveyDateFormatter = new Intl.DateTimeFormat('en-US', {
 
 export const surveyPostDefinitions = [
   {
-    slug: 'innovative-law-firm-cios',
-    load: () => import('$content/survey/entries/innovative-law-firm-cios.svx')
+    slug: '2025-law-firm-cmos',
+    load: () => import('$content/survey/entries/2025-law-firm-cmos.svx')
   }
 ] as const satisfies readonly SurveyPostDefinition[];
 

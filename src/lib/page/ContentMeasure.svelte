@@ -22,7 +22,7 @@
   const widthClasses = {
     standard: 'max-w-[740px]',
     narrow: 'max-w-[680px]',
-    copy: 'max-w-[620px]'
+    copy: 'max-w-[600px]'
   };
 
   const alignClasses = {

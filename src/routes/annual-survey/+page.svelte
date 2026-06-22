@@ -13,9 +13,9 @@
     eyebrow: 'Survey',
     title: 'Survey has started for the most innovative CMOs of 2026',
     description:
-      'Every summer, we survey the leadership of the best professional services firms to find out who are the most innovative CMOs in each industry according to their peers',
+      'Every summer, Overbase surveys the marketing teams in the best professional services firms to find out who are the most innovative CMOs in each industry according to their peers.',
     image: {
-      src: '/684997b8f748d8c055f3798d.avif',
+      src: '/cmos/group.avif',
       alt: 'Innovative CMO survey'
     }
   };
@@ -54,7 +54,7 @@
     <SurveyResultsSignup {form} />
 
     <p class="mt-[44px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-      Every summer, Overbase surveys the leadership of the best professional services
+      Every summer, Overbase surveys the marketing teams of the best professional services
       firms to find the most innovative CMOs in each industry.
     </p>
 
@@ -67,7 +67,7 @@
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700"
     >
       <p>
-        Overbase surveys firm leaders from the best law firms, insurance brokerages, consulting firms, accounting firms and government relations firms.
+        Overbase surveys marketing teams from the best law firms, insurance brokerages, consulting firms, accounting firms and government relations firms.
       </p>
       <p>
         Then we publish a list of the most innovative CMOs in each industry.
@@ -82,18 +82,22 @@
     <div
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700"
     >
-      <p>
-        We survey AmLaw 100 law firms, Business Insurance Top 100 insurance brokerages, Tier 1 and Tier 2 strategy consulting firms, Accounting Today Top 100
-        accounting firms and the the top 50 government relations firms by lobbying revenue.
-      </p>
        <p>
-        We send our survey to each firm's CMO and to each firm's leadership. Our results are entirely based on the responses to this survey.
+        We send our survey to each firm's marketing team. Our list is entirely based on the responses to this survey.
       </p>
       <p>
-        There's no way to request a survey, ask for a firm to be included or nominate a candidate.
+        We only survey marketing teams from the best firms in each industry:
       </p>
+         <ul class="list-disc pl-[32px]">
+        <li>AmLaw 100 law firms</li>
+        <li>Business Insurance Top 100 insurance brokerages</li>
+        <li>Tier 1 and Tier 2 strategy consulting firms</li>
+        <li>Accounting Today Top 100 accounting firms</li>
+        <li>Top 50 government relations firms by lobbying revenue</li>
+      </ul>
+    
       <p>
-        Nothing but survey results from peers is taken into account.
+        Nothing but survey results from peers is taken into account. And there's no way to request a survey, ask for a firm to be included or nominate a CMO.
       </p>
     </div>
 
@@ -104,25 +108,25 @@
     </h2>
     <p class="mt-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700"
     >
-        Thousands of leaders from the best professional services firms answer our survey every year. Check out last year's lists from each industry we survey.
-      </p>
+        +1,200 marketers from the best professional services firms answered our survey last year. Check out last year's lists for each industry.
+    </p>
     <div
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700 [&_a]:underline [&_a]:decoration-stone-400 [&_a]:underline-offset-[4px] [&_a:hover]:text-stone-950"
     >
       <p>
-        <a href="#">Last year's law firm CMOs -></a>
+        <a href="/annual-survey/2025-law-firm-cmos">Last year's law firm CMOs -></a>
       </p>
        <p>
-        <a href="#">Last year's insurance brokerage CMOs -></a>
+        <a href=#>Last year's insurance brokerage CMOs -></a>
       </p>
       <p>
-        <a href="#">Last year's consulting firm CMOs -></a>
+        <a href=#>Last year's consulting firm CMOs -></a>
       </p>
       <p>
-        <a href="#">Last year's accounting firm CMOs -></a>
+        <a href=#>Last year's accounting firm CMOs -></a>
       </p>
       <p>
-        <a href="#">Last year's government relations firm CMOs -></a>
+        <a href=#>Last year's government relations firm CMOs -></a>
       </p>
     </div>
   </ContentMeasure>

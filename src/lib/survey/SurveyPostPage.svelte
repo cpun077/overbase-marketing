@@ -12,7 +12,7 @@
 </svelte:head>
 
 <PageFrame topPadding="standard">
-  <ContentMeasure as="article" width="narrow">
+  <ContentMeasure as="article" width="copy">
     <a
       href="/annual-survey"
       class="text-[14px] font-medium leading-none tracking-normal text-stone-500 transition-colors duration-200 hover:text-stone-900"
@@ -29,7 +29,7 @@
       >
         {post.title}
       </h1>
-      <p class="mt-[20px] max-w-[620px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
+      <p class="mt-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
         {post.introduction}
       </p>
     </header>

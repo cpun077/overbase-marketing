@@ -75,7 +75,7 @@ export const actions = {
         bcc: smtpConfig.bcc,
         subject: "Survey results confirmation",
         text: [
-          "Thank you for your interest our CIO survey.",
+          "Thank you for your interest in our CMO survey.",
           "",
           "I'll send you the results when they're published mid-August.",
           "",
