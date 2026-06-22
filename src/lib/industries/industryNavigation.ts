@@ -7,7 +7,7 @@ export const industryNavigationItems = [
     href: "/industries/government-relations",
   },
   { id: "consulting", label: "Consulting", href: "/industries/consulting" },
-  { id: "tech", label: "Tech consulting", href: "/industries/tech" },
+  { id: "accounting", label: "Accounting", href: "/industries/accounting" },
 ] as const;
 
 export type IndustryNavigationItem = (typeof industryNavigationItems)[number];

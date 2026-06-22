@@ -21,7 +21,7 @@ export const governmentRelationsContent = {
           src: "/screenshots/government-relations3.png",
           alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
           width: 1408,
-          height: 677,
+          height: 670,
         },
       },
     ],

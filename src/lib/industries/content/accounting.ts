@@ -1,7 +1,7 @@
 import type { IndustryContentDefinition } from "../types";
 
-export const techContent = {
-  heading: "Overbase for tech consulting",
+export const accountingContent = {
+  heading: "Overbase for accounting",
   screenshots: {
     setup: {
       src: "/screenshots/consulting1.png",
@@ -12,16 +12,16 @@ export const techContent = {
     opportunityGroups: [
       {
         emailFormat: {
-          src: "/screenshots/tech2.png",
+          src: "/screenshots/accounting2.png",
           alt: "Overbase generated opportunity email preview.",
           width: 2348,
           height: 1560,
         },
         opportunityEmail: {
-          src: "/screenshots/tech3.png",
+          src: "/screenshots/accounting3.png",
           alt: "Gmail opportunity email showing an attached insurance renewal report from Overbase.",
           width: 1408,
-          height: 677,
+          height: 699,
         },
       },
     ],

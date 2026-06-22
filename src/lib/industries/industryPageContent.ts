@@ -1,8 +1,8 @@
+import { accountingContent } from './content/accounting';
 import { consultingContent } from './content/consulting';
 import { governmentRelationsContent } from './content/governmentRelations';
 import { insuranceContent } from './content/insurance';
 import { lawContent } from './content/law';
-import { techContent } from './content/tech';
 import type {
   IndustryContentDefinition,
   IndustryPageContent,
@@ -37,7 +37,7 @@ const industryPages = {
   law: lawContent,
   "government-relations": governmentRelationsContent,
   consulting: consultingContent,
-  tech: techContent,
+  accounting: accountingContent,
 } as const satisfies Record<string, IndustryContentDefinition>;
 
 type IndustryPageId = keyof typeof industryPages;

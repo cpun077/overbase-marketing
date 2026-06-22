@@ -39,21 +39,20 @@ I attached the PDF of the final proposal Jack submitted to them. As well as othe
 
 There's also a proposal our partner Thoughtworks submitted to them last month.`;
 
-const techOpportunityEmail = `Hi Ethan,
+const accountingOpportunityEmail = `Hi Ethan,
 
-A few people from the Chevron account mentioned 'legacy identity systems' in recent calls. They also mentioned authentication delays on calls with Microsoft and other partners.
+You have a meeting with Juan Mendoza at PepsiCo. Nicolas wants us to "bring the firm" to client meetings where we can.
 
-This may be a cue to discuss identity modernization. And you might check out these recordings:
+Consider inviting Ajay Agrawal from the Sustainability & ESG Assurance team. He can help PepsiCo look at their data pipelines for upcoming climate disclosure rules.
 
-https://gong.io/c/492047116583921046
-https://gong.io/c/305819475021384759`;
+The Food and Beverage sector has seen more ESG reporting requirements lately, and PepsiCo has been buying new carbon-accounting and tracking software.`;
 
 const opportunityEmailByIndustryId = {
   insurance: renewalOpportunityEmail,
   law: lawFirmOpportunityEmail,
   "government-relations": governmentRelationsOpportunityEmail,
   consulting: consultingOpportunityEmail,
-  tech: techOpportunityEmail,
+  accounting: accountingOpportunityEmail,
 } as const satisfies Record<HomeIndustryId, string>;
 
 export type OpportunityIndustry = HomeIndustry & {

@@ -1,6 +1,6 @@
 import {
   BankIcon,
-  DesktopTowerIcon,
+  CalculatorIcon,
   HandshakeIcon,
   ScalesIcon,
   UmbrellaIcon,
@@ -29,9 +29,9 @@ const homeIndustryMetadata = {
     icon: HandshakeIcon,
     heroProofLabel: "See how consulting firms use Overbase",
   },
-  tech: {
-    icon: DesktopTowerIcon,
-    heroProofLabel: "See how tech consulting firms use Overbase",
+  accounting: {
+    icon: CalculatorIcon,
+    heroProofLabel: "See how accounting firms use Overbase",
   },
 } as const satisfies Record<
   IndustryId,

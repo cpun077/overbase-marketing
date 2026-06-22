@@ -67,7 +67,7 @@
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700"
     >
       <p>
-        Overbase surveys marketing teams from the best law firms, insurance brokerages, consulting firms, accounting firms and government relations firms.
+        Overbase surveys marketing teams from the best insurance brokerages, law firms, government relations firms, consulting firms and accounting firms.
       </p>
       <p>
         Then we publish a list of the most innovative CMOs in each industry.
@@ -89,11 +89,11 @@
         We only survey marketing teams from the best firms in each industry:
       </p>
          <ul class="list-disc pl-[32px]">
-        <li>AmLaw 100 law firms</li>
         <li>Business Insurance Top 100 insurance brokerages</li>
+        <li>AmLaw 100 law firms</li>
+        <li>Top 50 government relations firms by lobbying revenue</li>
         <li>Tier 1 and Tier 2 strategy consulting firms</li>
         <li>Accounting Today Top 100 accounting firms</li>
-        <li>Top 50 government relations firms by lobbying revenue</li>
       </ul>
     
       <p>
@@ -114,19 +114,19 @@
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700 [&_a]:underline [&_a]:decoration-stone-400 [&_a]:underline-offset-[4px] [&_a:hover]:text-stone-950"
     >
       <p>
+        <a href=#>Last year's insurance brokerage CMOs -></a>
+      </p>
+      <p>
         <a href="/annual-survey/2025-law-firm-cmos">Last year's law firm CMOs -></a>
       </p>
        <p>
-        <a href=#>Last year's insurance brokerage CMOs -></a>
+        <a href=#>Last year's government relations firm CMOs -></a>
       </p>
       <p>
         <a href=#>Last year's consulting firm CMOs -></a>
       </p>
       <p>
         <a href=#>Last year's accounting firm CMOs -></a>
-      </p>
-      <p>
-        <a href=#>Last year's government relations firm CMOs -></a>
       </p>
     </div>
   </ContentMeasure>
