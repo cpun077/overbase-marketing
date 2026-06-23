@@ -13,7 +13,7 @@
     eyebrow: 'Survey',
     title: 'Survey has started for the most innovative CMOs of 2026',
     description:
-      'Every summer, Overbase surveys the marketing teams in the best professional services firms to find out who are the most innovative CMOs in each industry according to their peers.',
+      'Every year, Overbase surveys the marketing teams in the best professional services firms to find out who are the most innovative CMOs in each industry according to their peers.',
     image: {
       src: '/cmos/group.avif',
       alt: 'Innovative CMO survey'
@@ -54,7 +54,7 @@
     <SurveyResultsSignup {form} />
 
     <p class="mt-[44px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-      Every summer, Overbase surveys the marketing teams of the best professional services
+      Every year, Overbase surveys the marketing teams of the best professional services
       firms to find the most innovative CMOs in each industry.
     </p>
 
