@@ -77,13 +77,13 @@ export const actions = {
         text: [
           "Thank you for your interest in our CMO survey.",
           "",
-          "I'll send you the results when they're published mid-August.",
+          "I'll send you the results when they're published in January.",
           "",
           "julien",
         ].join("\n"),
         html: [
           "<p>Thanks for your interest in the Overbase survey.</p>",
-          "<p>I'll send you the results when they're published mid-August.</p>",
+          "<p>I'll send you the results when they're published in January.</p>",
           "<p>julien</p>",
         ].join(""),
       });
