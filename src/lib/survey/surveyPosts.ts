@@ -11,7 +11,11 @@ export const surveyPostDefinitions = [
   {
     slug: '2025-law-firm-cmos',
     load: () => import('$content/survey/entries/2025-law-firm-cmos.svx')
-  }
+  },
+  {
+    slug: '2025-insurance-cmos',
+    load: () => import('$content/survey/entries/2025-insurance-cmos.svx')
+  },
 ] as const satisfies readonly SurveyPostDefinition[];
 
 const formatSurveyDate = (publishedAt: string) => surveyDateFormatter.format(new Date(publishedAt));

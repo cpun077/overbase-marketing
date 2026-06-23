@@ -114,7 +114,7 @@
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700 [&_a]:underline [&_a]:decoration-stone-400 [&_a]:underline-offset-[4px] [&_a:hover]:text-stone-950"
     >
       <p>
-        <a href=#>Last year's insurance brokerage CMOs -></a>
+        <a href="/annual-survey/2025-insurance-cmos">Last year's insurance brokerage CMOs -></a>
       </p>
       <p>
         <a href="/annual-survey/2025-law-firm-cmos">Last year's law firm CMOs -></a>
