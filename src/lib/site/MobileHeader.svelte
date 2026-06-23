@@ -12,7 +12,7 @@
   });
 </script>
 
-<header class="fixed left-0 top-0 z-30 flex h-[50px] w-full items-center justify-between bg-white px-[20px] md:hidden">
+<header class="fixed left-0 top-0 z-30 flex h-[50px] w-full items-center justify-between bg-white px-[20px] lg:hidden">
   <a href="/" class="h-[27px] w-[45px]" aria-label="Home">
     <img src="/logo.png" alt="" class="h-full w-full object-contain" />
   </a>

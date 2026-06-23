@@ -1,9 +1,19 @@
 <script lang="ts">
   import { enhance } from '$app/forms';
   import type { SubmitFunction } from '@sveltejs/kit';
-  import type { ActionData } from './$types';
 
-  let { form }: { form?: ActionData } = $props();
+  export type SurveyResultsSignupForm =
+    | {
+        email?: string;
+        message: string;
+      }
+    | {
+        email: string;
+        success: true;
+        message: string;
+      };
+
+  let { form }: { form?: SurveyResultsSignupForm } = $props();
   // svelte-ignore state_referenced_locally
   let email = $state(form?.email ?? '');
   let isSubmitting = $state(false);
@@ -39,7 +49,7 @@
         Receive the survey results
       </label>
       <p class="mt-[8px] text-[14px] font-normal leading-[1.45] tracking-normal text-stone-600">
-        We'll send you the results when they're published in August
+        We'll send you the results when they're published in January
       </p>
     </div>
     <div class="min-w-0">

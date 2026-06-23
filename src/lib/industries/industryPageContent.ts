@@ -1,13 +1,13 @@
-import { accountingContent } from './content/accounting';
-import { consultingContent } from './content/consulting';
-import { governmentRelationsContent } from './content/governmentRelations';
-import { insuranceContent } from './content/insurance';
-import { lawContent } from './content/law';
+import { accountingContent } from "./content/accounting";
+import { consultingContent } from "./content/consulting";
+import { governmentRelationsContent } from "./content/governmentRelations";
+import { insuranceContent } from "./content/insurance";
+import { lawContent } from "./content/law";
 import type {
   IndustryContentDefinition,
   IndustryPageContent,
   IndustryPageSections,
-} from './types';
+} from "./types";
 
 const sharedIntroParagraphs = [
   "Selling with ecosystem partners should create a steady stream of warm, high-fit opportunities that are easier to start and faster to close",
@@ -23,7 +23,7 @@ const sharedSectionCopy: IndustryPageSections = {
   emailFormat: {
     id: "emailFormat",
     heading: "Design email formats",
-    body: "Pick what insight you want your team to receive by email. Then design custom email formats that perfectly match how your team is already selling",
+    body: "Pick what insight you want your team to receive by email. Then design custom email formats that perfectly match how your team already operates",
   },
   opportunityEmail: {
     id: "opportunityEmail",
