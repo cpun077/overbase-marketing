@@ -20,26 +20,17 @@
       You're leaving easy revenue on the table every day your data is siloed from your partners
     </p>
 
-    <div class="mt-[34px] flex items-center gap-[10px]">
+    <div class="mt-[34px] flex items-center justify-center">
       <ButtonLink
         href={joinHref}
         target="_blank"
         rel="noopener noreferrer"
         variant="primary"
-        size="large"
+        size="hero"
         textSize="compact"
+        shape="pill"
       >
         Join now
-      </ButtonLink>
-      <ButtonLink
-        href="https://cal.com/juliennewman"
-        target="_blank"
-        rel="noopener noreferrer"
-        variant="secondary"
-        size="large"
-        textSize="compact"
-      >
-        Request demo
       </ButtonLink>
     </div>
   </ContentMeasure>

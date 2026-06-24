@@ -34,12 +34,22 @@
     Overbase lets professional services firms share sales data with your ecosystem partners
   </p>
 
-  <div class="hero-actions mt-[54px] flex translate-y-[4px] items-center justify-center gap-[9px] opacity-0 will-change-[transform,opacity]">
-    <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" textSize="compact">Join now</ButtonLink>
-    <ButtonLink href="https://cal.com/juliennewman" target="_blank" rel="noopener noreferrer" variant="secondary" size="large" textSize="compact">Request demo</ButtonLink>
+  <div class="hero-actions mt-[38px] flex translate-y-[4px] items-center justify-center gap-[9px] opacity-0 will-change-[transform,opacity]">
+    <ButtonLink
+      href={joinHref}
+      target="_blank"
+      rel="noopener noreferrer"
+      variant="primary"
+      size="xlarge"
+      textSize="compact"
+      shape="pill"
+      class="shadow-[0_5px_12px_rgba(41,37,36,0.2)] hover:-translate-y-[2px] hover:shadow-[0_8px_16px_rgba(41,37,36,0.28)]"
+    >
+      Join now
+    </ButtonLink>
   </div>
 
-  <div class="hero-proof mt-[66px] w-full translate-y-[4px] opacity-0 will-change-[transform,opacity] sm:mt-[70px]">
+  <div class="hero-proof mt-[48px] w-full translate-y-[4px] opacity-0 will-change-[transform,opacity] sm:mt-[52px]">
     <HeroIndustryProof />
   </div>
   </ContentMeasure>
