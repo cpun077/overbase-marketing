@@ -8,7 +8,7 @@ export type NavLinkItem = {
 
 export const mobilePrimaryNavItems = [
   { label: 'Pricing', href: '/pricing' },
-  { label: 'Careers', href: '/careers' },
+  { label: 'Survey', href: '/annual-survey' },
 ] satisfies NavLinkItem[];
 
 export const industryNavItems = industryNavigationItems.map(({ label, href }) => ({

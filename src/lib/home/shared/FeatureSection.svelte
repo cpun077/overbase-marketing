@@ -14,7 +14,7 @@
 </script>
 
 <HomeSection>
-    <h2 class="font-heading text-[24px] font-medium leading-[1.18] tracking-normal text-stone-800 md:text-[26px]">
+    <h2 class="font-heading text-[28px] font-medium leading-[1.14] tracking-normal text-stone-800 md:text-[26px] md:leading-[1.18]">
       {title}
     </h2>
 

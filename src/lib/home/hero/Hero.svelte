@@ -9,7 +9,7 @@
 </script>
 
 <section class="px-[18px] pt-[126px] md:px-8 md:pt-[157px]">
-  <ContentMeasure class="flex !max-w-[780px] flex-col items-start md:items-center">
+  <ContentMeasure class="flex !max-w-[780px] flex-col items-center text-center">
   <a
     href={joinHref}
     target="_blank"
@@ -22,19 +22,19 @@
   </a>
 
   <h1
-    class="hero-title max-w-[520px] font-heading text-[72px] font-semibold leading-[1.04] tracking-normal text-stone-800 md:max-w-none md:text-center md:text-[82px] md:leading-[1.02]"
+    class="hero-title max-w-[520px] font-heading text-[72px] font-semibold leading-[1.04] tracking-normal text-stone-800 md:max-w-none md:text-[82px] md:leading-[1.02]"
   >
     <span class="hero-title-lead inline-block will-change-[transform,opacity]">Share</span>
     <span class="hero-title-growth inline-block will-change-[transform,opacity]">sales data</span>
   </h1>
 
   <p
-    class="hero-support mt-[28px] max-w-[430px] translate-y-[4px] font-[350] text-left text-[21px] leading-[1.65] tracking-normal text-stone-700 opacity-0 will-change-[transform,opacity] md:mt-[26px] md:max-w-[520px] md:text-center md:text-[20px]"
+    class="hero-support mt-[28px] max-w-[430px] translate-y-[4px] font-[350] text-[21px] leading-[1.65] tracking-normal text-stone-700 opacity-0 will-change-[transform,opacity] md:mt-[26px] md:max-w-[520px] md:text-[20px]"
   >
     Overbase lets professional services firms share sales data with your ecosystem partners
   </p>
 
-  <div class="hero-actions mt-[54px] flex translate-y-[4px] items-center gap-[9px] opacity-0 will-change-[transform,opacity] md:mt-[44px] md:justify-center">
+  <div class="hero-actions mt-[54px] flex translate-y-[4px] items-center justify-center gap-[9px] opacity-0 will-change-[transform,opacity] md:mt-[44px]">
     <ButtonLink href={joinHref} target="_blank" rel="noopener noreferrer" variant="primary" size="large" textSize="compact">Join now</ButtonLink>
     <ButtonLink href="https://cal.com/juliennewman" target="_blank" rel="noopener noreferrer" variant="secondary" size="large" textSize="compact">Request demo</ButtonLink>
   </div>
