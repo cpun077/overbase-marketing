@@ -9,7 +9,7 @@
   } = $props();
 </script>
 
-<section class="px-[18px] md:px-8">
+<section class="px-[18px] sm:px-8">
   <ContentMeasure>
     {@render children()}
   </ContentMeasure>

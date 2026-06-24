@@ -36,7 +36,7 @@
   ] as const satisfies readonly DataSourceItem[];
 </script>
 
-<div class="grid grid-cols-2 gap-[12px] md:grid-cols-3">
+<div class="grid grid-cols-2 gap-[12px] sm:grid-cols-3">
   {#each dataSourceItems as dataSource (dataSource.label)}
     {@const Icon = dataSource.icon}
     <div

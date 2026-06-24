@@ -14,11 +14,11 @@
   } = $props();
 
   const topPaddingClasses = {
-    standard: 'pt-[74px] md:pt-[43px]',
+    standard: 'pt-[74px] sm:pt-[43px]',
     compact: 'pt-[43px]'
   };
 </script>
 
-<main class={['px-[22px] pb-[120px] md:px-0', topPaddingClasses[topPadding], className]}>
+<main class={['px-[22px] pb-[120px] sm:px-0', topPaddingClasses[topPadding], className]}>
   {@render children()}
 </main>

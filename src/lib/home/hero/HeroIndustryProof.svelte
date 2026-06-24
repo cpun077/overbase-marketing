@@ -8,9 +8,9 @@
   );
 </script>
 
-<ContentMeasure class="!max-w-[660px] md:text-center">
+<ContentMeasure class="!max-w-[660px] sm:text-center">
   <div
-    class="flex flex-wrap justify-center gap-x-[22px] gap-y-[14px] px-[10px] pb-[4px] md:gap-x-[26px] md:gap-y-[10px] md:px-0"
+    class="flex flex-wrap justify-center gap-x-[22px] gap-y-[14px] px-[10px] pb-[4px] sm:gap-x-[26px] sm:gap-y-[10px] sm:px-0"
     aria-label="Industries"
     role="group"
   >
@@ -18,7 +18,7 @@
       <button
         type="button"
         class={[
-          'shrink-0 text-[14px] font-medium leading-none tracking-normal transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-950 md:text-[15px]',
+          'shrink-0 text-[14px] font-medium leading-none tracking-normal transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-950 sm:text-[15px]',
           selectedIndex === index ? 'text-stone-800' : 'text-stone-300 hover:text-stone-500'
         ]}
         aria-describedby={selectedIndex === index ? 'hero-industry-proof-detail' : undefined}

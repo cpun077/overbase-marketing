@@ -3,9 +3,9 @@
 </script>
 
 <footer class="border-t border-stone-200/70 bg-white">
-  <div class="w-full px-6 py-8 md:px-12 lg:px-24">
-    <div class="flex flex-col items-end justify-between gap-4 md:flex-row md:items-center md:gap-0">
-      <div class="hidden text-sm font-normal text-stone-500/60 md:block">
+  <div class="w-full px-6 py-8">
+    <div class="flex flex-col items-end justify-between gap-4 sm:flex-row sm:items-center sm:gap-0">
+      <div class="hidden text-sm font-normal text-stone-500/60 sm:block">
         Overbase, Inc. 600 California St, San Francisco
       </div>
 
