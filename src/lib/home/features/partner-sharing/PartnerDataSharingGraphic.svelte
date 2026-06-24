@@ -1,5 +1,27 @@
 <script lang="ts">
-  import { partnerDataShares } from './partnerSharingContent';
+  type PartnerDataShare = {
+    partnerName: string;
+    dataSourceSummary: string;
+    dataSourceCoverage: number;
+  };
+
+  const partnerDataShares = [
+    {
+      partnerName: 'Kensington, Blake & Thorne',
+      dataSourceSummary: 'all data sources',
+      dataSourceCoverage: 1
+    },
+    {
+      partnerName: 'Caldwell, Cross & Keating',
+      dataSourceSummary: '5 data sources',
+      dataSourceCoverage: 0.69
+    },
+    {
+      partnerName: 'Brightfield Partners',
+      dataSourceSummary: '2 data sources',
+      dataSourceCoverage: 0.14
+    }
+  ] as const satisfies readonly PartnerDataShare[];
 </script>
 
 <div class="rounded-[8px] border border-stone-200/70 bg-white px-[18px] py-[22px] shadow-[0_1px_0_rgba(48,47,45,0.03)] md:px-[21px] md:py-[24px]">

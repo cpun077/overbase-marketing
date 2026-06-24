@@ -1,15 +1,60 @@
 <script lang="ts">
-  import OpportunityEmailPreview from './OpportunityEmailPreview.svelte';
+  import {
+    homeIndustries,
+    type HomeIndustryId
+  } from '$lib/home/industryContent';
   import OpportunityIndustryTabs from './OpportunityIndustryTabs.svelte';
-  import { opportunityIndustries, type OpportunityIndustryId } from './opportunityEmailContent';
 
-  let selectedIndustryId = $state<OpportunityIndustryId>('insurance');
+  const opportunityEmailByIndustryId = {
+    insurance: `Hi Stephen,
 
-  const selectedIndustry = $derived(
-    opportunityIndustries.find((industry) => industry.id === selectedIndustryId) ?? opportunityIndustries[0]
-  );
+A whitespace analysis for the Exterra renewal is attached.
 
-  const selectIndustry = (industryId: OpportunityIndustryId) => {
+We identified new policies worth $400,000 which you might propose at your renewal meeting next month.
+
+Each proposed policy has a benchmark. Those were calculated with data from Allianz and Chubb. The right people from both carriers are CCed.`,
+
+    law: `Hi Shayne,
+Hi Laura,
+
+An activist hedge fund bought a 5% stake in ADP.
+
+You might want to see if this could be relevant to one of your attorneys, Shayne. And to one of your bankers, Laura.
+
+Discussion in a Bloomberg forum:
+https://blinks.bloomberg.com/rooms/IB_ROOM_ID_98725`,
+
+    'government-relations': `Hi Ray,
+
+Check out this new proposed tax credit program in Arizona:
+https://azleg.gov/active-bills/5858hggj
+
+The bill will be voted on in two weeks and there might be an opportunity to help Plug Power submit comments during rulemaking. Plug Power has 2 factories in Arizona.
+
+Jackson Reinstein knows Plug Power's VP Strategy. And Sagar Agrawal knows their COO.`,
+
+    consulting: `Hey Alex,
+
+You're working the pitch for JPMC and Jack London (CCed) in our NYC office pitched them JPMC.
+
+I attached the PDF of the final proposal Jack submitted to them. As well as other docs which might give useful context for your pitch.
+
+There's also a proposal our partner Thoughtworks submitted to them last month.`,
+
+    accounting: `Hi Ethan,
+
+You have a meeting with Juan Mendoza at PepsiCo. Nicolas wants us to "bring the firm" to client meetings where we can.
+
+Consider inviting Ajay Agrawal from the Sustainability & ESG Assurance team. He can help PepsiCo look at their data pipelines for upcoming climate disclosure rules.
+
+The Food and Beverage sector has seen more ESG reporting requirements lately, and PepsiCo has been buying new carbon-accounting and tracking software.`
+  } as const satisfies Record<HomeIndustryId, string>;
+
+  let selectedIndustryId = $state<HomeIndustryId>('insurance');
+
+  const selectedEmail = $derived(opportunityEmailByIndustryId[selectedIndustryId]);
+
+  const selectIndustry = (industryId: HomeIndustryId) => {
     selectedIndustryId = industryId;
   };
 </script>
@@ -21,11 +66,18 @@
     class="flex min-h-[52px] flex-col gap-[10px] border-b border-stone-200/70 bg-stone-50 px-[12px] py-[10px] sm:flex-row sm:items-start sm:justify-between sm:px-[13px]"
   >
     <OpportunityIndustryTabs
-      industries={opportunityIndustries}
+      industries={homeIndustries}
       {selectedIndustryId}
       onselect={selectIndustry}
     />
   </div>
 
-  <OpportunityEmailPreview email={selectedIndustry.email} />
+  <div class="min-h-0 flex-1 overflow-auto bg-white">
+    <div>
+      <pre
+        class="whitespace-pre-wrap px-[17px] pb-[4px] pt-[20px] text-[13px] font-normal leading-[1.65] tracking-normal text-stone-600 md:px-[19px] md:pt-[22px]"
+      ><code>{selectedEmail}</code></pre>
+      <img class="ml-[17px] mt-[26px] block w-[126px] md:ml-[19px]" src="/logo_full.png" alt="Overbase" />
+    </div>
+  </div>
 </div>

@@ -3,34 +3,68 @@
   import PageFrame from '$lib/page/PageFrame.svelte';
   import SurveyResultsSignup from '$lib/survey/SurveyResultsSignup.svelte';
   import type { SurveyResultsSignupForm } from './SurveyResultsSignup.svelte';
-  import { surveyLandingContent } from './surveyLandingContent';
 
   let { form }: { form?: SurveyResultsSignupForm | null } = $props();
+
+  const firmCriteria = [
+    'Business Insurance Top 100 insurance brokerages',
+    'AmLaw 100 law firms',
+    'Top 50 government relations firms by lobbying revenue',
+    'Tier 1 and Tier 2 strategy consulting firms',
+    'Accounting Today Top 100 accounting firms'
+  ] as const;
+
+  const previousListLinks = [
+    {
+      label: "Last year's insurance brokerage CMOs ->",
+      href: '#'
+    },
+    {
+      label: "Last year's law firm CMOs ->",
+      href: '/annual-survey/2026-law-firm-cmos'
+    },
+    {
+      label: "Last year's government relations firm CMOs ->",
+      href: '#'
+    },
+    {
+      label: "Last year's consulting firm CMOs ->",
+      href: '#'
+    },
+    {
+      label: "Last year's accounting firm CMOs ->",
+      href: '#'
+    }
+  ] as const;
 </script>
 
 <svelte:head>
-  <meta name="description" content={surveyLandingContent.metaDescription} />
+  <meta
+    name="description"
+    content="Overbase survey of the most innovative CMOs in professional services firms for 2027."
+  />
 </svelte:head>
 
 <PageFrame topPadding="standard">
   <ContentMeasure as="section" width="copy">
     <header>
       <p class="text-[14px] font-medium leading-none tracking-normal text-stone-500">
-        {surveyLandingContent.hero.eyebrow}
+        Survey
       </p>
       <h1
         class="mt-[14px] font-heading text-[32px] font-medium leading-[1.05] tracking-normal text-stone-900"
       >
-        {surveyLandingContent.hero.title}
+        Survey has started for the most innovative CMOs of 2027
       </h1>
 
       <p class="mt-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-        {surveyLandingContent.hero.description}
+        Every year, Overbase surveys the marketing teams in the best professional services firms to
+        find out who are the most innovative CMOs in each industry according to their peers.
       </p>
 
       <img
-        src={surveyLandingContent.hero.image.src}
-        alt={surveyLandingContent.hero.image.alt}
+        src="/cmos/group.avif"
+        alt="Innovative CMO survey"
         class="mt-[34px] block w-full rounded-[8px] object-cover"
         loading="eager"
         decoding="async"
@@ -40,54 +74,66 @@
     <SurveyResultsSignup form={form ?? undefined} />
 
     <p class="mt-[44px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-      {surveyLandingContent.introParagraph}
+      Every year, Overbase surveys the marketing teams of the best professional services firms to
+      find the most innovative CMOs in each industry.
     </p>
 
     <h2
       class="mt-[50px] font-heading text-[22px] font-medium leading-[1.05] tracking-normal text-stone-900"
     >
-      {surveyLandingContent.industrySection.heading}
+      Most innovative CMOs in each industry
     </h2>
     <div
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700"
     >
-      {#each surveyLandingContent.industrySection.paragraphs as paragraph}
-        <p>{paragraph}</p>
-      {/each}
+      <p>
+        Overbase surveys marketing teams from the best insurance brokerages, law firms, government
+        relations firms, consulting firms and accounting firms.
+      </p>
+
+      <p>Then we publish a list of the most innovative CMOs in each industry.</p>
     </div>
 
     <h2
       class="mt-[50px] font-heading text-[22px] font-medium leading-[1.05] tracking-normal text-stone-900"
     >
-      {surveyLandingContent.methodologySection.heading}
+      Criteria and methodology
     </h2>
     <div
       class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700"
     >
-      {#each surveyLandingContent.methodologySection.paragraphsBeforeList as paragraph}
-        <p>{paragraph}</p>
-      {/each}
+      <p>
+        We send our survey to each firm's marketing team. Our list is entirely based on the
+        responses to this survey.
+      </p>
+
+      <p>We only survey marketing teams from the best firms in each industry:</p>
+
       <ul class="list-disc pl-[32px]">
-        {#each surveyLandingContent.methodologySection.firmCriteria as criterion}
+        {#each firmCriteria as criterion}
           <li>{criterion}</li>
         {/each}
       </ul>
 
-      <p>{surveyLandingContent.methodologySection.closingParagraph}</p>
+      <p>
+        Nothing but survey results from peers is taken into account. And there's no way to request
+        a survey, ask for a firm to be included or nominate a CMO.
+      </p>
     </div>
 
     <h2
       class="mt-[50px] font-heading text-[22px] font-medium leading-[1.05] tracking-normal text-stone-900"
     >
-      {surveyLandingContent.previousListsSection.heading}
+      Last year's lists
     </h2>
     <p class="mt-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-      {surveyLandingContent.previousListsSection.description}
+      +1,200 marketers from the best professional services firms answered our survey last year.
+      Check out last year's lists for each industry.
     </p>
     <div
-      class="mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700 [&_a]:underline [&_a]:decoration-stone-400 [&_a]:underline-offset-[4px] [&_a:hover]:text-stone-950"
+      class="survey-previous-links mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-900 [&_a]:underline [&_a]:underline-offset-[4px] [&_a]:transition-colors [&_a:hover]:text-stone-500"
     >
-      {#each surveyLandingContent.previousListsSection.links as link}
+      {#each previousListLinks as link}
         <p>
           <a href={link.href}>{link.label}</a>
         </p>
@@ -95,3 +141,9 @@
     </div>
   </ContentMeasure>
 </PageFrame>
+
+<style>
+  .survey-previous-links :global(a) {
+    text-decoration-color: currentColor;
+  }
+</style>

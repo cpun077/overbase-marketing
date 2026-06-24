@@ -1,14 +1,20 @@
-<script lang="ts">
-  import type { OpportunityIndustry, OpportunityIndustryId } from './opportunityEmailContent';
+<script lang="ts" generics="IndustryId extends string">
+  import type { Component } from 'svelte';
+
+  type IndustryTabItem<Id extends string> = {
+    id: Id;
+    label: string;
+    icon: Component;
+  };
 
   let {
     industries,
     selectedIndustryId,
     onselect
   }: {
-    industries: readonly OpportunityIndustry[];
-    selectedIndustryId: OpportunityIndustryId;
-    onselect: (industryId: OpportunityIndustryId) => void;
+    industries: readonly IndustryTabItem<IndustryId>[];
+    selectedIndustryId: IndustryId;
+    onselect: (industryId: IndustryId) => void;
   } = $props();
 </script>
 
