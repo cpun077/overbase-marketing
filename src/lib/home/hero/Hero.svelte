@@ -1,8 +1,8 @@
 <script lang="ts">
   import { ArrowRightIcon } from 'phosphor-svelte';
   import ContentMeasure from '$lib/page/ContentMeasure.svelte';
-  import ButtonLink from '$lib/ui/ButtonLink.svelte';
   import { createPortalAuthUrlForMarketingPath } from '$lib/portalAuthLinks';
+  import HeroCtaButton from './HeroCtaButton.svelte';
   import HeroIndustryProof from './HeroIndustryProof.svelte';
 
   const joinHref = createPortalAuthUrlForMarketingPath('join', '/');
@@ -35,18 +35,13 @@
   </p>
 
   <div class="hero-actions mt-[38px] flex translate-y-[4px] items-center justify-center gap-[9px] opacity-0 will-change-[transform,opacity]">
-    <ButtonLink
+    <HeroCtaButton
       href={joinHref}
       target="_blank"
       rel="noopener noreferrer"
-      variant="primary"
-      size="xlarge"
-      textSize="compact"
-      shape="pill"
-      class="shadow-[0_5px_12px_rgba(41,37,36,0.2)] hover:-translate-y-[2px] hover:shadow-[0_8px_16px_rgba(41,37,36,0.28)]"
     >
       Join now
-    </ButtonLink>
+    </HeroCtaButton>
   </div>
 
   <div class="hero-proof mt-[48px] w-full translate-y-[4px] opacity-0 will-change-[transform,opacity] sm:mt-[52px]">

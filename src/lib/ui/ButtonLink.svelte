@@ -57,7 +57,7 @@
   };
 
   const variantClasses = {
-    primary: 'bg-stone-800 text-white hover:bg-stone-950',
+    primary: 'bg-stone-800 text-white hover:bg-[#3c3835]',
     secondary: 'border border-stone-300 bg-white text-stone-950 hover:bg-stone-50'
   };
 </script>
