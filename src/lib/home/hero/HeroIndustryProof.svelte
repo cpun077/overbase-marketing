@@ -19,7 +19,7 @@
         type="button"
         style={`--industry-enter-delay: ${1800 + index * 95}ms`}
         class={[
-          'hero-industry-option shrink-0 translate-y-[5px] text-[15px] font-medium leading-none tracking-normal opacity-0 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-950 sm:text-[16px]',
+          'hero-industry-option shrink-0 translate-y-[5px] text-[15px] font-medium leading-none tracking-normal opacity-0 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-950',
           selectedIndex === index ? 'text-stone-800' : 'text-stone-300 hover:text-stone-500'
         ]}
         aria-describedby={selectedIndex === index ? 'hero-industry-proof-detail' : undefined}
