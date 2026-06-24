@@ -131,7 +131,7 @@
       Check out last year's lists for each industry.
     </p>
     <div
-      class="survey-previous-links mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-900 [&_a]:underline [&_a]:underline-offset-[4px] [&_a]:transition-colors [&_a:hover]:text-stone-500"
+      class="survey-previous-links mt-[20px] flex flex-col gap-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700 [&_a]:underline [&_a]:underline-offset-[4px] [&_a]:transition-colors [&_a:hover]:text-stone-500"
     >
       {#each previousListLinks as link}
         <p>
