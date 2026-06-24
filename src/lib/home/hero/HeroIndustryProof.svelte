@@ -10,7 +10,7 @@
 
 <ContentMeasure class="!max-w-[660px] md:text-center">
   <div
-    class="-mx-[18px] flex gap-[22px] overflow-x-auto px-[18px] pb-[4px] md:mx-0 md:flex-wrap md:justify-center md:gap-x-[26px] md:gap-y-[10px] md:overflow-visible md:px-0"
+    class="flex flex-wrap justify-center gap-x-[22px] gap-y-[14px] px-[10px] pb-[4px] md:gap-x-[26px] md:gap-y-[10px] md:px-0"
     aria-label="Industries"
     role="group"
   >
@@ -40,7 +40,7 @@
   <div class="mt-[28px] min-h-[33px]">
     {#if selectedIndustry}
       {@const IndustryIcon = selectedIndustry.icon}
-      <div id="hero-industry-proof-detail" class="flex items-center gap-[10px] md:justify-center">
+      <div id="hero-industry-proof-detail" class="flex items-center justify-center gap-[10px]">
         <a
           href={selectedIndustry.href}
           class="inline-flex h-[33px] shrink-0 items-center gap-[7px] rounded-[7px] border border-stone-300 bg-white px-[10px] text-[13px] font-normal leading-none tracking-normal text-stone-800 shadow-[0_1px_0_rgba(48,47,45,0.03)] transition-colors hover:bg-stone-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-stone-950 sm:text-[14px]"

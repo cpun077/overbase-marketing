@@ -31,7 +31,7 @@
   id="mobile-menu"
   class="fixed bottom-0 left-0 right-0 top-[50px] z-20 flex flex-col overflow-y-auto bg-white px-[20px] pb-[28px]"
   aria-label="Mobile primary"
-  transition:slide={{ duration: 240, axis: 'y', easing: cubicOut }}
+  transition:slide={{ duration: 380, axis: 'y', easing: cubicOut }}
 >
   <div class="flex flex-1 flex-col border-t border-stone-200/70">
     <div class="flex flex-col gap-[30px] pt-[26px]">

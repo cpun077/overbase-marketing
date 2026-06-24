@@ -1,11 +1,9 @@
 <script lang="ts">
   import { afterNavigate } from '$app/navigation';
-  import { EqualsIcon, XIcon } from 'phosphor-svelte';
+  import MobileMenuToggleIcon from './MobileMenuToggleIcon.svelte';
   import MobileMenu from './MobileMenu.svelte';
 
   let open = $state(false);
-  const MenuIcon = $derived(open ? XIcon : EqualsIcon);
-  const menuIconSize = $derived(open ? 25 : 26);
 
   afterNavigate(() => {
     open = false;
@@ -25,7 +23,7 @@
     aria-controls="mobile-menu"
     onclick={() => (open = !open)}
   >
-    <MenuIcon size={menuIconSize} weight="regular" />
+    <MobileMenuToggleIcon {open} />
   </button>
 
   {#if open}
