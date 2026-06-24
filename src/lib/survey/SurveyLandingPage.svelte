@@ -17,7 +17,7 @@
   const previousListLinks = [
     {
       label: "Last year's insurance brokerage CMOs ->",
-      href: '#'
+      href: '/annual-survey/2026-insurance-cmos'
     },
     {
       label: "Last year's law firm CMOs ->",
