@@ -14,11 +14,11 @@
 </script>
 
 <HomeSection>
-    <h2 class="font-heading text-[24px] font-medium leading-[1.18] tracking-normal text-stone-800 md:text-[26px]">
+    <h2 class="font-heading text-[28px] font-medium leading-[1.14] tracking-normal text-stone-800 sm:text-[26px] sm:leading-[1.18]">
       {title}
     </h2>
 
-    <p class="mt-[18px] max-w-[700px] text-[15px] font-normal leading-[1.55] tracking-normal text-stone-500 md:text-[16px]">
+    <p class="mt-[18px] max-w-[700px] text-[15px] font-normal leading-[1.55] tracking-normal text-stone-500 sm:text-[16px]">
       {body}
     </p>
 

@@ -38,10 +38,10 @@
   method="POST"
   action="?/surveyResults"
   use:enhance={handleSurveySubmit}
-  class="mt-[33px] rounded-[8px] border border-stone-200 bg-stone-50 p-[18px] md:p-[20px]"
+  class="mt-[33px] rounded-[8px] border border-stone-200 bg-stone-50 p-[18px] sm:p-[20px]"
 >
-  <div class="grid gap-[14px] md:grid-cols-[minmax(0,1fr)_auto] md:items-start">
-    <div class="min-w-0 md:col-span-2">
+  <div class="grid gap-[14px] sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+    <div class="min-w-0 sm:col-span-2">
       <label
         for="survey-results-email"
         class="block text-[14px] font-medium leading-none tracking-normal text-stone-900"
@@ -79,7 +79,7 @@
       type="submit"
       disabled={isSubmitting}
       aria-busy={isSubmitting}
-      class="inline-flex h-[40px] shrink-0 items-center justify-center gap-[8px] justify-self-start rounded-[7px] bg-stone-800 px-[18px] text-[13px] font-normal leading-none tracking-normal text-white transition-colors hover:bg-stone-950 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-950 disabled:cursor-not-allowed disabled:bg-stone-500"
+      class="inline-flex h-[40px] shrink-0 items-center justify-center gap-[8px] justify-self-start rounded-[7px] bg-stone-800 px-[18px] text-[13px] font-normal leading-none tracking-normal text-white transition-colors hover:bg-[#3c3835] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-950 disabled:cursor-not-allowed disabled:bg-stone-500"
     >
       {#if isSubmitting}
         <span
