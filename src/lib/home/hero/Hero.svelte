@@ -22,14 +22,14 @@
   </a>
 
   <h1
-    class="hero-title max-w-[520px] font-heading text-[72px] font-semibold leading-[1.04] tracking-normal text-stone-800 sm:max-w-none sm:text-[82px] sm:leading-[1.02]"
+    class="hero-title max-w-[540px] font-heading text-[76px] font-semibold leading-[1.04] tracking-normal text-stone-800 sm:max-w-none sm:text-[88px] sm:leading-[1.02]"
   >
     <span class="hero-title-lead inline-block will-change-[transform,opacity]">Share</span>
     <span class="hero-title-growth inline-block will-change-[transform,opacity]">sales data</span>
   </h1>
 
   <p
-    class="hero-support mt-[28px] max-w-[430px] translate-y-[4px] font-[350] text-[21px] leading-[1.65] tracking-normal text-stone-700 opacity-0 will-change-[transform,opacity] sm:max-w-[520px]"
+    class="hero-support mt-[22px] max-w-[430px] translate-y-[4px] font-[350] text-[21px] leading-[1.65] tracking-normal text-stone-700 opacity-0 will-change-[transform,opacity] sm:max-w-[520px]"
   >
     Overbase lets professional services firms share sales data with your ecosystem partners
   </p>
