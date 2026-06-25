@@ -33,7 +33,7 @@
     },
     {
       label: "Last year's accounting firm CMOs ->",
-      href: '#'
+      href: '/annual-survey/2026-accounting-cmos'
     }
   ] as const;
 </script>
