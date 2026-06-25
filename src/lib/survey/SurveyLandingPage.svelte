@@ -25,7 +25,7 @@
     },
     {
       label: "Last year's government relations firm CMOs ->",
-      href: '#'
+      href: '/annual-survey/2026-gov-cmos'
     },
     {
       label: "Last year's consulting firm CMOs ->",
@@ -33,7 +33,7 @@
     },
     {
       label: "Last year's accounting firm CMOs ->",
-      href: '#'
+      href: '/annual-survey/2026-accounting-cmos'
     }
   ] as const;
 </script>
