@@ -60,7 +60,7 @@
     title="Trish Lilley, Chief Marketing and Business Development Officer at Barnes & Thornburg"
     imageSrc="/cmos/trishlilley.png"
     imageAlt="Black-and-white portrait of Trish over a blue patterned frame"
-    caption="Trish Lilley was picked for Innovation in Cybersecurity"
+    caption="Trish Lilley was picked for Adoption & Change Management"
   >
     <p>
       Lilley joined Barnes & Thornburg in late 2024 and has been working to make client

@@ -54,7 +54,7 @@
     title="Chris Wearing, Chief Commercial Officer at Teneo"
     imageSrc="/cmos/chriswearing.png"
     imageAlt="Black-and-white portrait of Chris over a blue patterned frame"
-    caption="Chris Wearing was picked for Innovation in Cybersecurity"
+    caption="Chris Wearing was picked for Adoption & Change Management"
   >
     <p>
       Wearing has helped Teneo deepen its advisory work in high-growth markets and open new

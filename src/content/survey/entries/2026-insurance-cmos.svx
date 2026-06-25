@@ -57,7 +57,7 @@
     title="Kate Pennell, Global Head of Brand and Marketing at Howden Group"
     imageSrc="/cmos/katepennell.png"
     imageAlt="Black-and-white portrait of Kate over a blue patterned frame"
-    caption="Kate Pennell was picked for Innovation in Cybersecurity"
+    caption="Kate Pennell was picked for Adoption & Change Management"
   >
     <p>
       Pennell helped make Howden’s global brand work at scale.
