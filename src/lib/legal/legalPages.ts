@@ -8,6 +8,8 @@ export type LegalPageContent = {
   label: string;
   title: string;
   updatedAt: string;
+  hideFromNavigation?: boolean;
+  robots?: 'noindex, nofollow';
   sections: readonly LegalSection[];
 };
 
@@ -19,7 +21,7 @@ const sharedClosingSection: LegalSection = {
   ]
 };
 
-const legalPages = [
+const legalPages: readonly LegalPageContent[] = [
   {
     slug: 'terms-of-service',
     label: 'Terms',
@@ -56,6 +58,8 @@ const legalPages = [
     label: 'DPA',
     title: 'Data Processing Addendum',
     updatedAt: '05/26/2026',
+    hideFromNavigation: true,
+    robots: 'noindex, nofollow',
     sections: [
       {
         title: 'Scope',
@@ -111,11 +115,13 @@ const legalPages = [
       sharedClosingSection
     ]
   }
-] as const satisfies LegalPageContent[];
+];
 
-export const legalNavigationItems = legalPages.map(({ label, slug }) => ({
-  label,
-  href: `/legal/${slug}`
-}));
+export const legalNavigationItems = legalPages
+  .filter((page) => !page.hideFromNavigation)
+  .map(({ label, slug }) => ({
+    label,
+    href: `/legal/${slug}`
+  }));
 
 export const getLegalPage = (slug: string) => legalPages.find((page) => page.slug === slug);

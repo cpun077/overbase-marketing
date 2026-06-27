@@ -5,4 +5,10 @@
   let { data }: { data: PageData } = $props();
 </script>
 
+<svelte:head>
+  {#if data.legalPage.robots}
+    <meta name="robots" content={data.legalPage.robots} />
+  {/if}
+</svelte:head>
+
 <LegalPage page={data.legalPage} />

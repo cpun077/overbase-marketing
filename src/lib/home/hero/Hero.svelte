@@ -31,7 +31,7 @@
   <p
     class="hero-support mt-[22px] max-w-[430px] translate-y-[4px] font-[350] text-[21px] leading-[1.65] tracking-normal text-stone-700 opacity-0 will-change-[transform,opacity] sm:max-w-[520px]"
   >
-    Overbase lets professional services firms share sales data with your ecosystem partners
+    Overbase helps professional services firms share sales data with your ecosystem partners
   </p>
 
   <div class="hero-actions mt-[38px] flex translate-y-[4px] items-center justify-center gap-[9px] opacity-0 will-change-[transform,opacity]">

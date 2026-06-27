@@ -127,7 +127,7 @@
       Last year's lists
     </h2>
     <p class="mt-[20px] text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-      +1,200 marketers from the best professional services firms answered our survey last year.
+      +900 marketers from the best professional services firms answered our survey last year.
       Check out last year's lists for each industry.
     </p>
     <div

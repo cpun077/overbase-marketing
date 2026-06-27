@@ -8,6 +8,13 @@
   import FeatureSection from '$lib/home/shared/FeatureSection.svelte';
 </script>
 
+<svelte:head>
+  <meta
+    name="description"
+    content="Overbase helps professional services firms share sales data with your ecosystem partners"
+  />
+</svelte:head>
+
 <main>
   <Hero />
   <div class="flex flex-col gap-[112px] pt-[160px] sm:gap-[150px] sm:pt-[220px]">
