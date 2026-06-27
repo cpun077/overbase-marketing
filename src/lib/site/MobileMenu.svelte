@@ -29,12 +29,12 @@
 
 <nav
   id="mobile-menu"
-  class="fixed bottom-0 left-0 right-0 top-[50px] z-20 flex flex-col overflow-y-auto bg-white px-[20px] pb-[28px]"
+  class="fixed bottom-0 left-0 right-0 top-[50px] z-20 flex flex-col overflow-y-auto bg-white pb-[28px]"
   aria-label="Mobile primary"
   transition:slide={{ duration: 380, axis: 'y', easing: cubicOut }}
 >
-  <div class="flex flex-1 flex-col border-t border-stone-200/70">
-    <div class="flex flex-col gap-[30px] pt-[26px]">
+  <div class="flex flex-1 flex-col">
+    <div class="flex flex-col gap-[30px] px-[20px] pt-[26px]">
       {#each navSections as section (section.id)}
         <section aria-labelledby={section.id}>
           <h2
@@ -62,8 +62,8 @@
       {/each}
     </div>
 
-    <div class="mt-[30px] flex flex-col border-t border-stone-200/70 pt-[24px]">
-      <div class="flex flex-col gap-[12px]">
+    <div class="mt-[30px] flex flex-col border-t border-stone-200/70">
+      <div class="flex flex-col gap-[12px] px-[20px] pt-[24px]">
         {#each authNavItems as link (link.authRoute)}
           {@const href = createPortalAuthUrlForCurrentPage(link.authRoute, page.url, currentHash)}
           {#if link.variant === 'primary'}

@@ -14,8 +14,8 @@
   } = $props();
 
   const topPaddingClasses = {
-    standard: 'pt-[74px] sm:pt-[43px]',
-    compact: 'pt-[43px]'
+    standard: 'pt-[98px] lg:pt-[43px]',
+    compact: 'pt-[74px] lg:pt-[43px]'
   };
 </script>
 
