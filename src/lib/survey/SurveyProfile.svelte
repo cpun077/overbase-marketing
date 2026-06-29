@@ -51,7 +51,7 @@
 
   .survey-profile h2 {
     margin: 0;
-    font-family: 'Spectral', ui-serif, Georgia, serif;
+    font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 500;
     line-height: 1.14;

@@ -15,7 +15,7 @@
     <img src="/logo.png" alt="" class="h-full w-full object-contain" />
   </a>
 
-  <nav class="flex flex-col gap-[15px] text-[13.5px] font-normal leading-none text-stone-500">
+  <nav class="flex flex-col gap-[15px] text-[13.5px] font-light leading-none text-stone-500">
     <DesktopSideMenuFlyout label="Industries" links={industryNavItems} {activePath} />
 
     {#each desktopPrimaryNavItems as item (item.label)}

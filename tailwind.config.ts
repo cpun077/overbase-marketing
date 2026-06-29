@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['Spectral', 'Georgia', 'serif']
+        body: ['var(--font-body)'],
+        heading: ['var(--font-heading)']
       },
       boxShadow: {
         button: '0 1px 2px rgba(0, 0, 0, 0.08)',
