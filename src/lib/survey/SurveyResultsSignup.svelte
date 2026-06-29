@@ -79,7 +79,7 @@
       type="submit"
       disabled={isSubmitting}
       aria-busy={isSubmitting}
-      class="inline-flex h-[40px] shrink-0 items-center justify-center gap-[8px] justify-self-start rounded-[7px] bg-stone-800 px-[18px] text-[13px] font-normal leading-none tracking-normal text-white transition-colors hover:bg-[#3c3835] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-950 disabled:cursor-not-allowed disabled:bg-stone-500"
+      class="inline-flex h-[40px] shrink-0 items-center justify-center gap-[8px] justify-self-start rounded-[7px] bg-stone-750 px-[18px] text-[13px] font-normal leading-none tracking-normal text-white transition-colors hover:bg-stone-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-stone-950 disabled:cursor-not-allowed disabled:bg-stone-500"
     >
       {#if isSubmitting}
         <span

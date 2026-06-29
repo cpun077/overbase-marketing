@@ -18,7 +18,7 @@
 </script>
 
 <HomeSection>
-    <h2 class="font-heading text-[28px] font-medium leading-[1.14] tracking-normal text-stone-800 sm:text-[26px] sm:leading-[1.18]">
+    <h2 class="font-heading text-[28px] font-medium leading-[1.14] tracking-normal text-stone-750 sm:text-[26px] sm:leading-[1.18]">
       See why teams stick with Overbase
     </h2>
 

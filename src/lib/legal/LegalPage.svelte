@@ -20,7 +20,7 @@
     <div class="mt-[32px] flex flex-col gap-[34px]">
       {#each page.sections as section, index (section.title)}
         <section>
-          <h2 class="font-heading text-[18px] font-medium leading-[1.25] tracking-normal text-stone-800 sm:text-[20px]">
+          <h2 class="font-heading text-[18px] font-medium leading-[1.25] tracking-normal text-stone-750 sm:text-[20px]">
             {index + 1}.&nbsp;&nbsp;{section.title}
           </h2>
 
