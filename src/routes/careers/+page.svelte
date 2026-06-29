@@ -12,13 +12,13 @@
 
     <div class="mt-[24px] flex max-w-[620px] flex-col gap-[22px]">
       <p class="text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-        We only hire engineers. We hire 99.9th percentile most smart people. And we never hire
-        anyone who has experience
+        We only hire engineers. We only hire 99.9th percentile most smart people. And we mostly hire
+        people who have no experience
       </p>
 
       <p class="text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-        Reach out if you're an engineering undergrad at MIT or Stanford. Or a CS undergrad at IIT
-        Bombay/Delhi with an AIR of 1 - 50 in the JEE
+        We're almost exclusively interested in meeting CS undergrads at MIT. CS undergrads at IIT
+        Bombay/Delhi with an AIR of 1 - 50 in the JEE. And technical founders of VC-backed startups
       </p>
     </div>
 
@@ -42,6 +42,16 @@
         <span>Product Engineer 1 - India</span>
         <ArrowUpRightIcon size={21} weight="regular" class="shrink-0 text-stone-900" aria-hidden="true" />
       </a>
+
+            <a
+        href="https://drive.google.com/file/d/1FLyWiHp0H9g8kjfgYLwpQ4_JS5CkkzoZ/view"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center justify-between gap-8 border-b border-stone-200/70 py-[24px] text-[15px] font-normal leading-none tracking-normal text-stone-700 transition-colors hover:text-stone-900 sm:text-[16px]"
+      >
+        <span>Industry CTO</span>
+        <ArrowUpRightIcon size={21} weight="regular" class="shrink-0 text-stone-900" aria-hidden="true" />
+      </a>
     </nav>
   </ContentMeasure>
 
@@ -53,9 +63,7 @@
       </p>
 
       <p class="text-[15px] font-normal leading-[1.55] tracking-normal text-stone-700 sm:text-[16px]">
-        Our comp is well below market and we keep a 997 work schedule. Working here only makes
-        sense if you're focused on pursuing excellence. And if you care deeply about collaborating
-        with your intellectual peers
+        Our comp is well below market and we keep a 997 work schedule
       </p>
     </div>
   </ContentMeasure>
