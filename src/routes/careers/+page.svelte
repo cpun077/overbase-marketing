@@ -12,13 +12,8 @@
 
     <div class="mt-[24px] flex max-w-[620px] flex-col gap-[22px]">
       <p class="text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-        We only hire engineers. We only hire 99.9th percentile most smart people. And we mostly hire
-        people who have no experience
-      </p>
-
-      <p class="text-[16px] font-normal leading-[1.55] tracking-normal text-stone-700">
-        We're almost exclusively interested in meeting CS undergrads at MIT. CS undergrads at IIT
-        Bombay/Delhi with an AIR of 1 - 50 in the JEE. And technical founders of VC-backed startups
+        We only hire engineers. We only hire 99.9th percentile most smart people. We mostly hire
+        former startup founders or people who have no experience
       </p>
     </div>
 
