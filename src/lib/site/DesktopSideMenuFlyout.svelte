@@ -16,7 +16,7 @@
 <div class="group relative w-fit">
   <a
     href={links[0]?.href ?? '#'}
-    class="flex items-center gap-[6px] text-stone-500 outline-none hover:text-stone-700 focus-visible:text-stone-900"
+    class="flex items-center gap-[6px] text-stone-700 outline-none hover:text-stone-900 focus-visible:text-stone-900"
     aria-haspopup="true"
   >
     <span>{label}</span>
@@ -36,7 +36,7 @@
         <a
           href={link.href}
           class={[
-            'block text-[14px] font-light leading-none text-stone-500 hover:text-stone-900 focus-visible:text-stone-900 focus-visible:outline-none',
+            'block text-[14px] font-normal leading-none text-stone-700 hover:text-stone-900 focus-visible:text-stone-900 focus-visible:outline-none',
             { 'text-stone-900': activePath === link.href }
           ]}
           aria-current={activePath === link.href ? 'page' : undefined}
