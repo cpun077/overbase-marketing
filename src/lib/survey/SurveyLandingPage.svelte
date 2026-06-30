@@ -40,7 +40,7 @@
   const researchTeamProfiles = [
     {
       name: 'Julien Newman',
-      title: 'CEO at Overbase',
+      title: 'Founder at Overbase',
       imageSrc: '/julien.png',
       imageAlt: 'Julien Newman'
     },
